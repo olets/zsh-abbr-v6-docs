@@ -116,7 +116,7 @@ export default {
       "script",
       {
         src: "https://cdn.usefathom.com/script.js",
-        "data-site": "PSZVZLUT",
+        "data-site": "KVOUORES",
         defer: true,
       },
     ],
