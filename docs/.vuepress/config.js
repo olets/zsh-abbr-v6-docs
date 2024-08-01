@@ -1,10 +1,10 @@
-import * as dotenv from 'dotenv';
+import * as dotenv from "dotenv";
 import { copyCodePlugin } from "vuepress-plugin-copy-code2";
-dotenv.config()
-import { defaultTheme } from 'vuepress';
-import { docsearchPlugin } from '@vuepress/plugin-docsearch';
-import { shikiPlugin } from '@vuepress/plugin-shiki';
-import { tocPlugin } from '@vuepress/plugin-toc';
+dotenv.config();
+import { defaultTheme } from "vuepress";
+import { docsearchPlugin } from "@vuepress/plugin-docsearch";
+import { shikiPlugin } from "@vuepress/plugin-shiki";
+import { tocPlugin } from "@vuepress/plugin-toc";
 
 export default {
   // https://v2.vuepress.vuejs.org/reference/config.html#head
@@ -66,15 +66,13 @@ export default {
     ],
 
     // social metas
-    [
-      "meta",
-      { property: "og:title", content: "zsh-abbr" },
-    ],
+    ["meta", { property: "og:title", content: "zsh-abbr" }],
     [
       "meta",
       {
         property: "og:description",
-        content: "The zsh manager for auto-expanding abbreviations, inspired by fish shell.",
+        content:
+          "The zsh manager for auto-expanding abbreviations, inspired by fish shell.",
       },
     ],
     [
@@ -101,7 +99,8 @@ export default {
       "meta",
       {
         name: "twitter:description",
-        content: "The zsh manager for auto-expanding abbreviations, inspired by fish shell.",
+        content:
+          "The zsh manager for auto-expanding abbreviations, inspired by fish shell.",
       },
     ],
     [
@@ -117,35 +116,38 @@ export default {
       "script",
       {
         src: "https://cdn.usefathom.com/script.js",
-        'data-site': "PSZVZLUT",
-        'defer': true,
-      }
+        "data-site": "PSZVZLUT",
+        defer: true,
+      },
     ],
     [
       "script",
       {
         src: "/js/analytics.js",
-      }
+      },
     ],
 
     // Font
     [
-      "link", {
-        "rel": "preconnect",
-        "href": "https://fonts.googleapis.com"
+      "link",
+      {
+        rel: "preconnect",
+        href: "https://fonts.googleapis.com",
       },
     ],
     [
-      "link", {
-        "rel": "preconnect",
-        "href": "https://fonts.gstatic.com",
-        "crossorigin": "true",
+      "link",
+      {
+        rel: "preconnect",
+        href: "https://fonts.gstatic.com",
+        crossorigin: "true",
       },
     ],
     [
-      "link", {
-        "href": "https://fonts.googleapis.com/css2?family=Fira+Code&display=swap",
-        "rel": "stylesheet",
+      "link",
+      {
+        href: "https://fonts.googleapis.com/css2?family=Fira+Code&display=swap",
+        rel: "stylesheet",
       },
     ],
   ],
@@ -166,11 +168,11 @@ export default {
         class: "external-link",
         rel: "",
         target: "",
-      }
+      },
     },
     toc: {
       level: [2, 3, 4],
-    }
+    },
   },
 
   // theme and its config

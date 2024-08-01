@@ -1,4 +1,4 @@
-require('dotenv').config();
+require("dotenv").config();
 
 const config = {
   index_name: process.env.INDEX_NAME,
@@ -8,7 +8,7 @@ const config = {
     lvl0: {
       selector: ".sidebar-heading.active",
       global: true,
-      default_value: "Documentation"
+      default_value: "Documentation",
     },
     lvl1: ".theme-default-content h1",
     lvl2: ".theme-default-content h2",
@@ -19,12 +19,12 @@ const config = {
     lang: {
       selector: "/html/@lang",
       type: "xpath",
-      global: true
-    }
+      global: true,
+    },
   },
   custom_settings: {
-    attributesForFaceting: ["lang"]
-  }
-}
+    attributesForFaceting: ["lang"],
+  },
+};
 
-console.log(JSON.stringify(config))
+console.log(JSON.stringify(config));
