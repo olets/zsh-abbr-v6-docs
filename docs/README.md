@@ -1,5 +1,10 @@
 # zsh-abbr ![GitHub release (latest by date)](https://img.shields.io/github/v/release/olets/zsh-abbr?include_prereleases&label=pre-release)
 
+:::danger
+These docs are for the not-yet-released v6.  
+For v5 docs see <https://zsh-abbr.olets.dev>
+:::
+
 ![splash card: the text '% abbr' as green neon lettering](/images/zsh-abbr.png)
 
 

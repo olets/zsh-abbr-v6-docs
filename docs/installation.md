@@ -1,5 +1,10 @@
 # Installation
 
+:::danger
+These docs are for the not-yet-released v6.  
+For v5 docs see <https://zsh-abbr.olets.dev>
+:::
+
 [[toc]]
 
 ## Package
