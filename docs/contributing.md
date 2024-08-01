@@ -15,7 +15,7 @@ Both zsh-abbr and its documentation are released with a Contributor Code of Cond
 
 To learn more about contributing to zsh-abbr, visit <https://github.com/olets/zsh-abbr>.
 
-To learn more about contributing to zsh-abbr's documentation, visit <https://github.com/olets/zsh-abbr-v5-docs>.
+To learn more about contributing to zsh-abbr's documentation, visit <https://github.com/olets/zsh-abbr-v6-docs>.
 
 ## Sponsoring
 

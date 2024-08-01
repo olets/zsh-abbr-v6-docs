@@ -13,7 +13,7 @@
 {"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QIn the following example, additional bindings are added such that Ctrle expands abbreviations without adding a trailing space and Ctrla has the same behavior as Space.\\E$"}
 {"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QIn the following example, CtrlSpace expands abbreviations and Space is not bound to any zsh-abbr widget.\\E$"}
 {"rule":"UPPERCASE_SENTENCE_START","sentence":"^\\Qfast-syntax-highlighting users see #24.\\E$"}
-{"rule":"THE_SUPERLATIVE","sentence":"^\\Qzsh-abbr-v5-docs GitHub release (latest by date)\\E$"}
+{"rule":"THE_SUPERLATIVE","sentence":"^\\Qzsh-abbr-v6-docs GitHub release (latest by date)\\E$"}
 {"rule":"UPPERCASE_SENTENCE_START","sentence":"^\\Qand fill in values in \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q.\\E$"}
 {"rule":"UPPERCASE_SENTENCE_START","sentence":"^\\Qzsh-abbr by Henry Bley-Vroman is licensed under a license which is the unmodified text of CC BY-NC-SA 4.0 and the unmodified text of a Hippocratic License 3.\\E$"}
 {"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QO‘ahu Water Protectors a coalition of organizers and concerned community members fighting for safe, clean water on Oʻahu.\\E$"}
@@ -22,4 +22,4 @@
 {"rule":"THE_SUPERLATIVE","sentence":"^\\Qzsh-abbr GitHub release (latest by date)\\E$"}
 {"rule":"UPPERCASE_SENTENCE_START","sentence":"^\\Qzsh-abbr is the zsh manager for auto-expanding abbreviations - text that when written in a terminal is replaced with other (typically longer) text.\\E$"}
 {"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QUse CtrlSpace instead of Space, and \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\QEnter instead of Enter.\\E$"}
-{"rule":"UPPERCASE_SENTENCE_START","sentence":"^\\Qzsh-abbr-v5-docs GitHub release (latest by date)\\E$"}
+{"rule":"UPPERCASE_SENTENCE_START","sentence":"^\\Qzsh-abbr-v6-docs GitHub release (latest by date)\\E$"}

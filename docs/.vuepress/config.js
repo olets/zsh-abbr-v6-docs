@@ -153,8 +153,9 @@ export default {
   // site config
   // https://v2.vuepress.vuejs.org/guide/configuration.html#site-config
   lang: "en-US",
-  title: "zsh-abbr v5",
-  description: "The zsh manager for auto-expanding abbreviations, inspired by fish shell.",
+  title: "zsh-abbr v6",
+  description:
+    "The zsh manager for auto-expanding abbreviations, inspired by fish shell.",
 
   markdown: {
     headers: {
@@ -182,10 +183,10 @@ export default {
     contributors: false,
     lastUpdated: false,
     docsDir: "docs",
-    docsRepo: "olets/zsh-abbr-v5-docs",
+    docsRepo: "olets/zsh-abbr-v6-docs",
     navbar: [
       {
-        text: "v5.x",
+        text: "v6.x",
         children: [
           {
             text: "v4.x",

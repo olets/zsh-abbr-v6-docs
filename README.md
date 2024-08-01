@@ -1,6 +1,6 @@
-# zsh-abbr-v5-docs
+# zsh-abbr-v6-docs
 
-Source for [zsh-abbr](https://github.com/olets/zsh-abbr/tree/v5)'s documentation. Read the documentation at <https://zsh-abbr.olets.dev/>.
+Source for [zsh-abbr](https://github.com/olets/zsh-abbr/tree/v6)'s documentation. Read the documentation at <https://zsh-abbr.olets.dev/>.
 
 ## Contents
 
@@ -61,13 +61,13 @@ Thanks for your interest. Contributions are welcome!
 
 > Please note that this project is released with a [Contributor Code of Conduct](CODE_OF_CONDUCT.md). By participating in this project you agree to abide by its terms.
 
-Check the [Issues](https://github.com/olets/zsh-abbr-v5-docs/issues) to learn whether your topic has been discussed before or if it is being worked on.
+Check the [Issues](https://github.com/olets/zsh-abbr-v6-docs/issues) to learn whether your topic has been discussed before or if it is being worked on.
 
 Please read [CONTRIBUTING.md](CONTRIBUTING.md) before opening a pull request.
 
 ## License
 
-<a href="https://www.github.com/olets/zsh-abbr-v5-docs">zsh-abbr-v5-docs</a> by <a href="https://www.github.com/olets">Henry Bley-Vroman</a> is licensed under a license which is the unmodified text of <a href="https://creativecommons.org/licenses/by-nc-sa/4.0">CC BY-NC-SA 4.0</a> and the unmodified text of a <a href="https://firstdonoharm.dev/build?modules=eco,extr,media,mil,sv,usta">Hippocratic License 3</a>. It is not affiliated with Creative Commons or the Organization for Ethical Source.
+<a href="https://www.github.com/olets/zsh-abbr-v6-docs">zsh-abbr-v6-docs</a> by <a href="https://www.github.com/olets">Henry Bley-Vroman</a> is licensed under a license which is the unmodified text of <a href="https://creativecommons.org/licenses/by-nc-sa/4.0">CC BY-NC-SA 4.0</a> and the unmodified text of a <a href="https://firstdonoharm.dev/build?modules=eco,extr,media,mil,sv,usta">Hippocratic License 3</a>. It is not affiliated with Creative Commons or the Organization for Ethical Source.
 
 Human-readable summary of (and not a substitute for) the [LICENSE](LICENSE) file:
 

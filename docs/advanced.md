@@ -13,7 +13,6 @@ Variable | Type | <div style="width: 300px">Use</div> | Default | Limitations
 `ABBR_EXPANSION_CURSOR_MARKER` | string | Read `ABBR_SET_EXPANSION_CURSOR` in this table | `$ABBR_LINE_CURSOR_MARKER` | Cannot contain `^`. Read [issue #140](https://github.com/olets/zsh-abbr/issues/140).
 `ABBR_FORCE` | integer | If non-zero, use force mode without passing `--force` (read [Usage&nbsp;>&nbsp;Commands&nbsp;>&nbsp;`add`](/commands.html#add)) | 0
 `ABBR_LINE_CURSOR_MARKER` | string | Read `ABBR_SET_LINE_CURSOR` in this table | %
-`ABBR_PRECMD_LOGS` | integer | ⚠️ DEPRECATED ⚠️ If non-zero, support precmd logs, for example to warn that a deprecated widget was used | 1
 `ABBR_QUIET` | integer | If non-zero, use quiet mode without passing `--quiet` | 0
 `ABBR_QUIETER` | integer | If non-zero, use quieter mode without passing `--quieter` | 0
 `ABBR_SET_EXPANSION_CURSOR` | integer | If non-zero and the expansion includes `ABBR_EXPANSION_CURSOR_MARKER`, `abbr-expand` will replace the expansion's first instance of `ABBR_EXPANSION_CURSOR_MARKER` with the cursor, and `abbr-expand-and-insert`'s bound key will not be inserted at the end of the expansion (read also [Widgets and key bindings](#widgets-and-key-bindings)) | 0
@@ -30,7 +29,6 @@ Variable | Type | Value
 ---|---|---
 `ABBR_GLOBAL_SESSION_ABBREVIATIONS` | associative array | The global session abbreviations
 `ABBR_GLOBAL_USER_ABBREVIATIONS` | associative array | The global user abbreviations
-`ABBR_PRECMD_MESSAGE` | prompt string | ⚠️ DEPRECATED ⚠️ Message printed by `precmd` hook if `ABBR_PRECMD_LOGS` is non-zero
 `ABBR_REGULAR_SESSION_ABBREVIATIONS` | associative array | The regular session abbreviations
 `ABBR_SOURCE_PATH` | string | Path to the `zsh-abbr.zsh`
 `ABBR_REGULAR_USER_ABBREVIATIONS` | associative array | The regular user abbreviations
@@ -77,7 +75,6 @@ Widget | Behavior | Default binding
 `abbr-expand` | If following an abbreviation, expands it | Not bound
 `abbr-expand-and-accept` | If following an abbreviation, expands it; then accepts the line | <kbd>Enter</kbd> (`" "`)
 `abbr-expand-and-insert` | If following an abbreviation, expands it; then adds a space | <kbd>Space</kbd> (`"^ "`); in search mode, <kbd>Ctrl Space</kbd> (`-M isearch "^ "`)
-`abbr-expand-and-space` | ⚠️ DEPRECATED ⚠️ Alias for `abbr-expand-and-insert` | Not bound
 
 zsh-abbr also binds <kbd>Ctrl Space</kbd> (`"^ "`) to `magic-space` and, in search mode, <kbd>Space</kbd> (`-M isearch " "`) to `magic-space`.
 
