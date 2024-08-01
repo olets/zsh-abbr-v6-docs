@@ -1,9 +1,0 @@
-name: Search Crawler
-
-on:
-  push:
-    branches:
-      - main
-
-jobs:
-  crawl:
