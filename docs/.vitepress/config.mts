@@ -180,8 +180,12 @@ export default defineConfig({
         text: "v6",
         items: [
           {
-            text: "v6",
+            text: "Major version",
             link: "",
+          },
+          {
+            text: "v6",
+            link: "/",
             target: "_self",
           },
           {

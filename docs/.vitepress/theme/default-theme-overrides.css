@@ -89,6 +89,33 @@ and reformatted
   font-size: inherit;
 }
 
+/**
+ * Nav dropdown toggles
+ */
+.VPFlyout.active .button .text,
+.VPFlyout.active:hover .button .text {
+  color: inherit;
+}
+
+.VPFlyout.active .button:focus-visible .text,
+.VPFlyout.active .button:hover .text {
+  color: var(--vp-c-brand-1);
+}
+
+/**
+ * Nav dropdown items
+ */
+.VPFlyout.VPNavBarMenuGroup:focus-visible,
+.VPFlyout.VPNavBarMenuGroup:hover,
+.VPFlyout.VPNavBarMenuGroup .VPLink.active {
+  color: inherit;
+}
+
+.VPFlyout.VPNavBarMenuGroup .VPLink.active:focus-visible,
+.VPFlyout.VPNavBarMenuGroup .VPLink.active:hover {
+  color: var(--vp-c-brand-1);
+}
+
 .VPNav .VPNavScreenAppearance {
   padding: 0;
 
