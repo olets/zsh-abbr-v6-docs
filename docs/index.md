@@ -11,8 +11,11 @@ For v5 docs see <https://zsh-abbr.olets.dev>
 
 ![splash card: the text '% abbr' as green neon lettering](/images/zsh-abbr.png)
 
-
 **zsh-abbr** is the zsh manager for **auto-expanding abbreviations** - text that when written in a terminal is replaced with other (typically longer) text. Inspired by fish shell.
+
+:::tip
+Do you use zsh-abbr and zsh-autosuggestions? Check out [zsh-autosuggestions-abbreviations-strategy](https://github.com/olets/zsh-autosuggestions-abbreviations-strategy). It teaches zsh-autosuggestions to suggest your zsh-abbr abbreviations.
+:::
 
 For example, abbreviate `git checkout` as `co` (or even `c` or anything else). Type `co`<kbd>Space</kbd> and the `co` **turns into** `git checkout`. Abbreviate `git checkout main` as `cm`. Type `cm`<kbd>Enter</kbd> and the `cm` **turns into and runs** `git checkout main`. Don't want an abbreviation to expand? Use <kbd>Ctrl</kbd><kbd>Space</kbd> instead of <kbd>Space</kbd>, and `;`<kbd>Enter</kbd> instead of <kbd>Enter</kbd>.
 
