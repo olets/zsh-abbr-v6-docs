@@ -197,19 +197,8 @@ export default defineConfig({
         ],
       },
       {
-        text: "Changelog",
-        link: "https://github.com/olets/zsh-abbr/blob/main/CHANGELOG.md",
-        target: "_self",
-      },
-      {
-        text: "License",
-        link: "https://github.com/olets/zsh-abbr/blob/main/LICENSE",
-        target: "_self",
-      },
-      // Manual instead of with defaultTheme's `repo` so that we can specify the `target`
-      {
-        text: "GitHub",
-        link: "https://github.com/olets/zsh-abbr",
+        text: "Source, Changelog, License",
+        link: "https://github.com/olets/zsh-abbr/",
         target: "_self",
       },
       {
