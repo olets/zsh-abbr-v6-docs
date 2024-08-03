@@ -263,7 +263,7 @@ export default defineConfig({
           },
           {
             text: "Community",
-            link: "/external/community.md",
+            link: "/community.md",
           },
         ],
       },
