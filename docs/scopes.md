@@ -15,8 +15,6 @@ Some zsh-abbr commands take a **scope** parameter. There are two supported scope
 
 User is the default scope.
 
-[[toc]]
-
 ## User
 
 User abbreviations are **immediately available to all current and future sessions** (that is, in all open and future terminals).

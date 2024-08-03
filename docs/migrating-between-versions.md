@@ -5,8 +5,6 @@ These docs are for the not-yet-released v6.
 For v5 docs see <https://zsh-abbr.olets.dev>
 :::
 
-[[toc]]
-
 ## Upgrading from v5 to v6
 
 1. If you've set up something custom with [Advanced&nbsp;>&nbsp;Widgets&nbsp;and&nbsp;key&nbsp;bindings](/advanced.html#widgets-and-key-bindings) make sure you've migrated off deprecated functions.

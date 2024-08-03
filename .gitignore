@@ -1,5 +1,4 @@
 node_modules
-.temp
-.cache
-docs/.vuepress/dist
 .env
+docs/.vitepress/dist
+docs/.vitepress/cache
