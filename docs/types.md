@@ -9,8 +9,6 @@ Some zsh-abbr commands take a **type** parameter. There are two supported scopes
 
 Regular is the default type.
 
-[[toc]]
-
 ## Regular
 
 Regular abbreviations expand only at the start of the command line.
