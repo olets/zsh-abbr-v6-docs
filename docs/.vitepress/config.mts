@@ -162,6 +162,10 @@ export default defineConfig({
       class: "vp-external-link-icon",
       target: "_self",
     },
+    theme: {
+      light: "github-light-high-contrast",
+      dark: "github-dark-high-contrast",
+    },
   },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
