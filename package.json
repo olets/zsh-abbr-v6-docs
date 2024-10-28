@@ -15,6 +15,7 @@
   "license": "SEE LICENSE IN LICENSE",
   "repository": "https://github.com/olets/zsh-abbr-v6-docs",
   "devDependencies": {
+    "@olets/tailwindcss-fluid-font-size": "npm:@jsr/olets__tailwindcss-fluid-font-size",
     "autoprefixer": "^10.4.20",
     "postcss-import": "^16.1.0",
     "tailwindcss": "^3.4.7",
