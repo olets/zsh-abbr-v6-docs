@@ -15,9 +15,15 @@ Variable | Type | <div style="width: 300px">Use</div> | Default | Limitations
 `ABBR_DRY_RUN` | integer | If non-zero, use dry run mode without passing `--dry-run` | 0
 `ABBR_EXPANSION_CURSOR_MARKER` | string | Read `ABBR_SET_EXPANSION_CURSOR` in this table | `$ABBR_LINE_CURSOR_MARKER` | Cannot contain `^`. Read [issue #140](https://github.com/olets/zsh-abbr/issues/140).
 `ABBR_FORCE` | integer | If non-zero, use force mode without passing `--force` (read [Usage&nbsp;>&nbsp;Commands&nbsp;>&nbsp;`add`](/commands.html#add)) | 0
+`ABBR_GET_AVAILABLE_ABBREVIATION` | integer | If non-zero, check whether you could have used an abbreviation | 0
 `ABBR_LINE_CURSOR_MARKER` | string | Read `ABBR_SET_LINE_CURSOR` in this table | %
+`ABBR_LOG_AVAILABLE_ABBREVIATION` | integer | If non-zero, log the abbreviation you could have used (you'll want to toggle `ABBR_GET_AVAILABLE_ABBREVIATION` on, too) | 0
+`ABBR_LOG_AVAILABLE_ABBREVIATION_AFTER` | integer | If non-zero, `ABBR_LOG_AVAILABLE_ABBREVIATION` output is logged _after_ the command output | 0
+`ABBR_PUSH_HISTORY` | integer | f non-zero, if `abbr-expand-and-accept` expands an abbreviation there will be two history entries: the first is what was typed (with the abbreviation), the second is what was run (with the expansion) | 0
 `ABBR_QUIET` | integer | If non-zero, use quiet mode without passing `--quiet` | 0
 `ABBR_QUIETER` | integer | If non-zero, use quieter mode without passing `--quieter` | 0
+`ABBR_REGULAR_ABBREVIATION_GLOB_PREFIXES` <Badge type="tip" text="^6.0.0" /> | array | Glob prefixes. One or more prefixes can go in front of a regular abbreviation, and it will still expand. | `( )`
+`ABBR_REGULAR_ABBREVIATION_SCALAR_PREFIXES` <Badge type="tip" text="^6.0.0" /> | array | Scalar prefixes. One or more prefixes can go in front of a regular abbreviation, and it will still expand. | `( 'sudo ' )`
 `ABBR_SET_EXPANSION_CURSOR` | integer | If non-zero and the expansion includes `ABBR_EXPANSION_CURSOR_MARKER`, `abbr-expand` will replace the expansion's first instance of `ABBR_EXPANSION_CURSOR_MARKER` with the cursor, and `abbr-expand-and-insert`'s bound key will not be inserted at the end of the expansion (read also [Widgets and key bindings](#widgets-and-key-bindings)) | 0
 `ABBR_SET_LINE_CURSOR` | integer | If non-zero and `abbr-expand` didn't place the cursor (because the `ABBR_SET_EXPANSION_CURSOR` is zero or the expansion did not include `ABBR_EXPANSION_CURSOR_MARKER`), `abbr-expand-and-insert` will replace the line's first instance of `ABBR_LINE_CURSOR_MARKER` with the cursor instead of inserting its bound key at the end of the expansion (read also [Widgets and key bindings](#widgets-and-key-bindings)) | 0
 `ABBR_TMPDIR` | String | Path to the directory temporary files are stored in. | `${${TMPDIR:-/tmp}%/}/zsh-abbr/` for users without privileges,<br>`${${TMPDIR:-/tmp}%/}/zsh-abbr/` for users with privileges (e.g. `su`)<br><br> If changing this, you may want to delete the default directory.<br>As of v5.7.0, custom values for this variable do not have to end in `/`.
@@ -33,8 +39,13 @@ Variable | Type | Value
 `ABBR_GLOBAL_SESSION_ABBREVIATIONS` | associative array | The global session abbreviations
 `ABBR_GLOBAL_USER_ABBREVIATIONS` | associative array | The global user abbreviations
 `ABBR_REGULAR_SESSION_ABBREVIATIONS` | associative array | The regular session abbreviations
-`ABBR_SOURCE_PATH` | string | Path to the `zsh-abbr.zsh`
 `ABBR_REGULAR_USER_ABBREVIATIONS` | associative array | The regular user abbreviations
+`ABBR_SOURCE_PATH` <Badge type="tip" text="^6.0.0" /> | string | Path to the `zsh-abbr.zsh`
+`ABBR_UNUSED_ABBREVIATION` <Badge type="tip" text="^6.0.0" /> | string | If `ABBR_GET_AVAILABLE_ABBREVIATION` is non-zero and you miss an opportunity to use one of your abbreviations, this is set to the abbreviation you could have used.
+`ABBR_UNUSED_ABBREVIATION_EXPANSION` <Badge type="tip" text="^6.0.0" /> | string | If `ABBR_GET_AVAILABLE_ABBREVIATION` is non-zero and you miss an opportunity to use one of your abbreviations, this is set to the thing you could have abbreviated.
+`ABBR_UNUSED_ABBREVIATION_PREFIX` <Badge type="tip" text="^6.0.0" /> | string | `ABBR_GET_AVAILABLE_ABBREVIATION` is non-zero and you miss an opportunity to use of your abbreviations with one of your prefixes, this is set to the prefix of the abbreviation you could have used.
+`ABBR_UNUSED_ABBREVIATION_SCOPE` <Badge type="tip" text="^6.0.0" /> | string |  If `ABBR_GET_AVAILABLE_ABBREVIATION` is non-zero and you miss an opportunity to use one of your abbreviations, this is set to the scope of abbreviation you could have used.
+`ABBR_UNUSED_ABBREVIATION_TYPE` <Badge type="tip" text="^6.0.0" /> | string |  If `ABBR_GET_AVAILABLE_ABBREVIATION` is non-zero and you miss an opportunity to use one of your abbreviations, this is set to the type of the abbreviation you could have used.
 
 Each element in `ABBR_GLOBAL_SESSION_ABBREVIATIONS`, `ABBR_GLOBAL_USER_ABBREVIATIONS`, `ABBR_REGULAR_SESSION_ABBREVIATIONS`, and `ABBR_REGULAR_USER_ABBREVIATIONS` has the form `ABBREVIATION=EXPANSION`. The expansion value is quoted. Scripters will probably want to remove one level of quotes, using the [Q modifier](http://zsh.sourceforge.net/Doc/Release/Expansion.html#Modifiers) (e.g. `for v in ${(Qv)ABBR_REGULAR_USER_ABBREVIATIONS}...`).
 
