@@ -250,7 +250,29 @@ export default defineConfig({
           },
           {
             text: "Advanced",
-            link: "/advanced",
+            collapsed: false,
+            items: [
+              {
+                text: "Configuration variables",
+                link: "/advanced/configuration-variables",
+              },
+              {
+                text: "Exported variables",
+                link: "/advanced/exported-variables",
+              },
+              {
+                text: "Storage and manual editing",
+                link: "/advanced/storage-and-manual-editing",
+              },
+              {
+                text: "Widgets and key bindings",
+                link: "/advanced/widgets-and-key-bindings",
+              },
+              {
+                text: "Integrations",
+                link: "/advanced/integrations",
+              },
+            ],
           },
           {
             text: "Performance",
