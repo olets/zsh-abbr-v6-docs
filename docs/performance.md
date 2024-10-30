@@ -8,7 +8,7 @@ next:
 
 :::danger
 These docs are for the not-yet-released v6.  
-For v5 docs see <https://zsh-abbr.olets.dev>
+For v5 docs visit <https://zsh-abbr.olets.dev>
 :::
 
 zsh-abbr adds roughly 8ms + <=0.4ms/abbreviation to first prompt lag, 12ms + <=0.4ms/abbreviation to first command lag, and 6ms + 0.3ms/abbreviation to exit time.

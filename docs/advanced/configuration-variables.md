@@ -2,7 +2,7 @@
 
 :::danger
 These docs are for the not-yet-released v6.  
-For v5 docs see <https://zsh-abbr.olets.dev>
+For v5 docs visit <https://zsh-abbr.olets.dev>
 :::
 
 Variable | Added In | Type | <div style="width: 300px">Use</div> | Default | Limitations

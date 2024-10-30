@@ -2,7 +2,7 @@
 
 :::danger
 These docs are for the not-yet-released v6.  
-For v5 docs see <https://zsh-abbr.olets.dev>
+For v5 docs visit <https://zsh-abbr.olets.dev>
 :::
 
 Out of the box regular abbreviations ([Types > Regular](../types.md#regular)) expand only at the start of the command line.

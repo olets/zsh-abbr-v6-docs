@@ -2,7 +2,7 @@
 
 :::danger
 These docs are for the not-yet-released v6.  
-For v5 docs see <https://zsh-abbr.olets.dev>
+For v5 docs visit <https://zsh-abbr.olets.dev>
 :::
 
 ## Upgrading from v5 to v6
@@ -16,7 +16,7 @@ For v5 docs see <https://zsh-abbr.olets.dev>
 1. If you're using any undocumented internal zsh-abbr functions deprecated in v5, you'll have to come up with something else. 
 
     <details>
-    <summary>See the full list</summary>
+    <summary>Toggle the full list</summary>
 
     These internal values were dropped:
     - `ABBR_PRECMD_MESSAGE`
@@ -97,4 +97,4 @@ For v5 docs see <https://zsh-abbr.olets.dev>
 
 ## Older versions
 
-See the [v5 docs](https://v5.zsh-abbr.olets.dev).
+Visit the [v5 docs](https://v5.zsh-abbr.olets.dev).

@@ -2,7 +2,7 @@
 
 :::danger
 These docs are for the not-yet-released v6.  
-For v5 docs see <https://zsh-abbr.olets.dev>
+For v5 docs visit <https://zsh-abbr.olets.dev>
 :::
 
 User abbreviations live in a plain text file which you can edit directly, share, keep in version control, etc.
