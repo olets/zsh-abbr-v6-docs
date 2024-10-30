@@ -116,7 +116,7 @@ and then use `ABBR_LINE_CURSOR_MARKER` in your abbreviations:
 :::
 
 ::: tip
-Learn how to customize cursor markers in [Advanced > Configuration Variables](/configuration-variables)
+Learn how to customize cursor markers in [Configuration Variables](/advanced/configuration-variables)
 :::
 
 ## Ditch aliases
