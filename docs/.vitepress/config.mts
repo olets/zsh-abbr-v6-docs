@@ -230,6 +230,10 @@ export default defineConfig({
         link: "/usage",
       },
       {
+        text: "What's new?",
+        link: "/whats-new",
+      },
+      {
         text: "Installation",
         link: "/installation",
       },
