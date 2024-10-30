@@ -13,7 +13,7 @@ Variable | Added In | Type | Value
 `ABBR_GLOBAL_USER_ABBREVIATIONS` | <Badge type="info">4.0.0</Badge> | associative array | The global user abbreviations
 `ABBR_REGULAR_SESSION_ABBREVIATIONS` | <Badge type="info">4.0.0</Badge> | associative array | The regular session abbreviations
 `ABBR_REGULAR_USER_ABBREVIATIONS` | <Badge type="info">4.0.0</Badge> | associative array | The regular user abbreviations
-`ABBR_SOURCE_PATH` | <Badge type="warning">6.0.0</Badge> | string | Path to the `zsh-abbr.zsh`
+`ABBR_SOURCE_PATH` | <Badge type="info">3.3.3</Badge> | string | Path to the `zsh-abbr.zsh`
 `ABBR_UNUSED_ABBREVIATION` | <Badge type="warning">6.0.0</Badge> | string | If `ABBR_GET_AVAILABLE_ABBREVIATION` is non-zero and you miss an opportunity to use one of your abbreviations, this is set to the abbreviation you could have used.
 `ABBR_UNUSED_ABBREVIATION_EXPANSION` | <Badge type="warning">6.0.0</Badge> | string | If `ABBR_GET_AVAILABLE_ABBREVIATION` is non-zero and you miss an opportunity to use one of your abbreviations, this is set to the thing you could have abbreviated.
 `ABBR_UNUSED_ABBREVIATION_PREFIX` | <Badge type="warning">6.0.0</Badge> | string | If `ABBR_GET_AVAILABLE_ABBREVIATION` is non-zero and you miss an opportunity to use a prefixed abbreviation, this is set to the prefix.
