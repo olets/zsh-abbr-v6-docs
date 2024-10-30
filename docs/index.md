@@ -2,7 +2,7 @@
 titleTemplate: :title # see also VitePress config
 ---
 
-# zsh-abbr ![GitHub release (latest by date)](https://img.shields.io/github/v/release/olets/zsh-abbr?include_prereleases&label=pre-release)
+# zsh-abbr ![GitHub release (latest by date)](https://img.shields.io/github/v/release/olets/zsh-abbr?include_prereleases&label=pre-release) ![GitHub commits since latest release](https://img.shields.io/github/commits-since/olets/zsh-abbr/latest?include_prereleases)
 
 :::danger
 These docs are for the not-yet-released v6.  
