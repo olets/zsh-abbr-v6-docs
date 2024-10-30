@@ -11,7 +11,11 @@ Regular is the default type.
 
 ## Regular
 
-Regular abbreviations expand only at the start of the command line.
+Regular abbreviations expand only at the start of the command line, or —with the default configuration— after `sudo ` at the start of the command line.
+
+::: tip
+Read [Prefixes](./prefixes.md) for how to disable the `sudo ` prefix and/or add your own prefixes.
+:::
 
 To scope a zsh-abbr command to the user, pass the `--regular` flag or its shorthand `-r`… or do not pass a type flag — regular is the default scope.
 
