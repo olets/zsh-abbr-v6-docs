@@ -226,12 +226,12 @@ export default defineConfig({
         link: "/",
       },
       {
-        text: "Installation",
-        link: "/installation",
+        text: "Essential commands",
+        link: "/usage",
       },
       {
-        text: "Usage",
-        link: "/usage",
+        text: "Installation",
+        link: "/installation",
       },
       {
         text: "Reference",
