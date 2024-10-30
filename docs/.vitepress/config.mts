@@ -261,6 +261,18 @@ export default defineConfig({
                 link: "/advanced/exported-variables",
               },
               {
+                text: "History",
+                link: "/advanced/history",
+              },
+              {
+                text: "Prefixes",
+                link: "/advanced/prefixes",
+              },
+              {
+                text: "Reminders",
+                link: "/advanced/reminders",
+              },
+              {
                 text: "Storage and manual editing",
                 link: "/advanced/storage-and-manual-editing",
               },
