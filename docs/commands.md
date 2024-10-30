@@ -78,7 +78,7 @@ Added the regular user abbreviation `x`
 % x[Space] # expands to `y z  `
 ```
 
-User abbreviations can also be manually added to the user abbreviations file. Read [Advanced&nbsp;>&nbsp;Storage and manual editing](/advanced.html#storage-and-manual-editing).
+User abbreviations can also be manually added to the user abbreviations file. Read [Storage and manual editing](/storage-and-manual-editing).
 
 The regular session abbreviations, global session abbreviations, regular user abbreviations, and user global abbreviations are all independent. You can have more than one abbreviation with the same ABBREVIATION. Order of precedence is 
 
@@ -174,7 +174,7 @@ Did not erase abbreviation `x`. Please specify one of
 Erased global user abbreviation `x`
 ```
 
-User abbreviations can also be manually erased from the user abbreviations file. Read [Advanced&nbsp;>&nbsp;Storage and manual editing](/advanced.html#storage-and-manual-editing).
+User abbreviations can also be manually erased from the user abbreviations file. Read [Storage and manual editing](/storage-and-manual-editing).
 
 ## `expand`
 
@@ -562,7 +562,7 @@ Rename is scope- and type-specific. If you get a "no matching abbreviation" erro
 
 Use `--dry-run` to check what the result would be without making any actual changes.
 
-User abbreviations can also be manually renamed in the user abbreviations file. Read [Advanced&nbsp;>&nbsp;Storage and manual editing](/advanced.html#storage-and-manual-editing).
+User abbreviations can also be manually renamed in the user abbreviations file. Read [Storage and manual editing](/storage-and-manual-editing).
 
 Conflicts will error or warn. To continue regardless, use `--force`. To silence the warning, use `--quieter`.
 

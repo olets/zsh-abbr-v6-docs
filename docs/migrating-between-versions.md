@@ -7,7 +7,7 @@ For v5 docs see <https://zsh-abbr.olets.dev>
 
 ## Upgrading from v5 to v6
 
-1. If you've set up something custom with [Advanced&nbsp;>&nbsp;Widgets&nbsp;and&nbsp;key&nbsp;bindings](/advanced.html#widgets-and-key-bindings) make sure you've migrated off deprecated functions.
+1. If you've set up something custom with [Widgets&nbsp;and&nbsp;key&nbsp;bindings](/widgets-and-key-bindings) make sure you've migrated off deprecated functions.
 
     - Instead of `abbr-expand-and-space` use `abbr-expand-and-insert`
 
@@ -71,7 +71,7 @@ For v5 docs see <https://zsh-abbr.olets.dev>
 
 1. Install the latest zsh-abbr following the instructions at [Installation](/installation.html).
 
-1. If you use `zsh-syntax-highlighting` to highlight abbreviations, use the new snippets at [Reference&nbsp;>&nbsp;Advanced&nbsp;>&nbsp;Syntax highlighting](/advanced.html#syntax-highlighting).
+1. If you use `zsh-syntax-highlighting` to highlight abbreviations, use the new snippets at [Reference&nbsp;>&nbsp;Syntax highlighting](/syntax-highlighting).
 
 ## Downgrading from v6 to v5
 
