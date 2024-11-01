@@ -7,7 +7,7 @@ For v5 docs visit <https://zsh-abbr.olets.dev>
 
 With the default configuration, hitting <kbd>Enter</kbd> after an abbreviation expands the abbreviation, runs the expansion, and saving the expansion to your shell history.
 
-([Essential commands](../usage.md) covers the basics. [Widgets and key bindings](./widgets-and-key-bindings.md) covers how to change the trigger from <kbd>Enter</kbd> to something else.)
+([Essential commands](./usage.md) covers the basics. [Widgets and key bindings](./widgets-and-key-bindings.md) covers how to change the trigger from <kbd>Enter</kbd> to something else.)
 
 zsh-abbr's **history** support lets you opt into _also_ saving the abbreviation to your shell history.
 

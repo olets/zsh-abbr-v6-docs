@@ -258,35 +258,35 @@ export default defineConfig({
             items: [
               {
                 text: "Configuration variables",
-                link: "/advanced/configuration-variables",
+                link: "/configuration-variables",
               },
               {
                 text: "Exported variables",
-                link: "/advanced/exported-variables",
+                link: "/exported-variables",
               },
               {
                 text: "History",
-                link: "/advanced/history",
+                link: "/history",
               },
               {
                 text: "Prefixes",
-                link: "/advanced/prefixes",
+                link: "/prefixes",
               },
               {
                 text: "Reminders",
-                link: "/advanced/reminders",
+                link: "/reminders",
               },
               {
                 text: "Storage and manual editing",
-                link: "/advanced/storage-and-manual-editing",
+                link: "/storage-and-manual-editing",
               },
               {
                 text: "Widgets and key bindings",
-                link: "/advanced/widgets-and-key-bindings",
+                link: "/widgets-and-key-bindings",
               },
               {
                 text: "Integrations",
-                link: "/advanced/integrations",
+                link: "/integrations",
               },
             ],
           },
