@@ -9,7 +9,7 @@ Are you're forgetting to take advantage of the abbreviations you've added? Toggl
 
 `ABBR_GET_AVAILABLE_ABBREVIATION` enables and disables the reminders system.
 
-::: note
+::: info
 The reminders system cannot distinguish between a command you typed and a command you pulled up from history. For example, with the reminders system on and reminder logging on:
 
 ```shell
@@ -20,9 +20,9 @@ abbr: `a` is your global user abbreviation for `b`
 # ^ that's good
 
 # now 
-% [pull up b from history][Enter]
+% [pull up the previous from history][Enter]
 abbr: `a` is your global user abbreviation for `b`
-# ^ that's true, and a "reminder", but arguably a false positive
+# ^ might feel like a false positive
 ```
 
 But _you_ know you didn't miss using the abbreviation!
