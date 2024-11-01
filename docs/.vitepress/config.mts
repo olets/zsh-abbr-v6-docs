@@ -222,20 +222,47 @@ export default defineConfig({
 
     sidebar: [
       {
-        text: "Introduction",
-        link: "/",
-      },
-      {
-        text: "Essential commands",
-        link: "/usage",
-      },
-      {
-        text: "What's new?",
-        link: "/whats-new",
-      },
-      {
-        text: "Installation",
-        link: "/installation",
+        text: "Overview",
+        items: [
+          {
+            text: "Introduction",
+            link: "/",
+          },
+          {
+            text: "Essential commands",
+            link: "/usage",
+          },
+          {
+            text: "What's new?",
+            link: "/whats-new",
+          },
+          {
+            text: "Installation",
+            link: "/installation",
+          },
+          {
+            text: "Advanced",
+            collapsed: false,
+            items: [
+              {
+                text: "History",
+                link: "/history",
+              },
+              {
+                text: "Prefixes",
+                link: "/prefixes",
+              },
+              {
+                text: "Reminders",
+                link: "/reminders",
+              },
+              {
+                text: "Integrations",
+                link: "/integrations",
+              },
+            ],
+          },
+        ],
       },
       {
         text: "Reference",
@@ -253,48 +280,34 @@ export default defineConfig({
             link: "/commands",
           },
           {
-            text: "Advanced",
-            collapsed: false,
-            items: [
-              {
-                text: "Configuration variables",
-                link: "/configuration-variables",
-              },
-              {
-                text: "Exported variables",
-                link: "/exported-variables",
-              },
-              {
-                text: "History",
-                link: "/history",
-              },
-              {
-                text: "Prefixes",
-                link: "/prefixes",
-              },
-              {
-                text: "Reminders",
-                link: "/reminders",
-              },
-              {
-                text: "Storage and manual editing",
-                link: "/storage-and-manual-editing",
-              },
-              {
-                text: "Widgets and key bindings",
-                link: "/widgets-and-key-bindings",
-              },
-              {
-                text: "Integrations",
-                link: "/integrations",
-              },
-            ],
+            text: "Configuration variables",
+            link: "/configuration-variables",
           },
           {
-            text: "Performance",
-            link: "/performance",
+            text: "Exported variables",
+            link: "/exported-variables",
+          },
+          {
+            text: "Storage and manual editing",
+            link: "/storage-and-manual-editing",
+          },
+          {
+            text: "Widgets and key bindings",
+            link: "/widgets-and-key-bindings",
           },
         ],
+      },
+      {
+        text: "Migrating between versions",
+        link: "/migrating-between-versions",
+      },
+      {
+        text: "Uninstalling",
+        link: "/uninstalling",
+      },
+      {
+        text: "Performance",
+        link: "/performance",
       },
       {
         text: "Contribute",
@@ -312,14 +325,6 @@ export default defineConfig({
             link: "/community.md",
           },
         ],
-      },
-      {
-        text: "Migrating between versions",
-        link: "/migrating-between-versions",
-      },
-      {
-        text: "Uninstalling",
-        link: "/uninstalling",
       },
     ],
 
