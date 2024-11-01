@@ -75,7 +75,6 @@ For v5 docs visit <https://zsh-abbr.olets.dev>
 
 ## Downgrading from v6 to v5
 
-1. Update the config: @TODO
 1. Install v5.x
     - Plugin manager: use your manager to install zsh-abbr from branch `v5`.
     - Homebrew:
