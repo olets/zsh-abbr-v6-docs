@@ -71,8 +71,6 @@ For v5 docs visit <https://zsh-abbr.olets.dev>
 
 1. Install the latest zsh-abbr following the instructions at [Installation](/installation.html).
 
-1. If you use `zsh-syntax-highlighting` to highlight abbreviations, use the new snippets at [Integrations&nbsp;>&nbsp;Syntax highlighting](./integrations.md).
-
 ## Downgrading from v6 to v5
 
 1. Install v5.x
