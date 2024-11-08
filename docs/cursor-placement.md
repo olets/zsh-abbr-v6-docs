@@ -23,13 +23,13 @@ Now, under the default configuration, <kbd>Space</kbd> will jump the cursor to t
 % abbr a='my command --flag=% --another-flag %'
 ```
 
-Now typing `a` and then <kbd>Space</kbd> expands the abbreviation and places the cursor:
+Now typing `a`<kbd>Space</kbd> expands the abbreviation and places the cursor:
 
 ```shell
 % my command --flag=[CURSOR IS HERE] --another-flag %
 ```
 
-And now, typing `xyz` and then <kbd>Space</kbd> places the cursor again:
+And now, typing `xyz`<kbd>Space</kbd> places the cursor again:
 
 ```shell
 % my command --flag=xyz --another-flag [CURSOR IS HERE]
@@ -41,4 +41,23 @@ The "marker" doesn't have to be `%`. Customize it with the `ABBR_LINE_CURSOR_MAR
 
 The trigger doesn't have to be <kbd>Space</kbd>. Learn more at [Widgets and key bindings](./widgets-and-key-bindings.md).
 
-You can have two cursor markers, one —`ABBR_LINE_CURSOR_MARKER`— used by the `abbr-expand-and-insert` widget (the widget called by <kbd>Space</kbd> in the default configuration) and another —`ABBR_EXPANSION_CURSOR_MARKER`— used by the `abbr-expand` widget (not used in the default configuration). Learn more at [Configuration variables](./configuration-variables.md) and [Widgets and key bindings](./widgets-and-key-bindings.md).
+### Multiple markers
+
+You can have two distinct cursor markers. One (`ABBR_LINE_CURSOR_MARKER`) is jumped to by the `abbr-expand-and-insert` widget[^1]  _regardless_ of whether an abbreviation was expanded. The other (`ABBR_EXPANSION_CURSOR_MARKER`) is jumped to by the `abbr-expand` widget[^2] _when_ an abbreviation is expanded.
+
+[^1]: In the default configuration, `abbr-expand` is bound to <kbd>Space</kbd>.
+
+[^2]: `abbr-expand` is triggered indirectly by `abbr-expand-and-insert`. You can also bind it directly to a key - learn more at [Widgets and key bindings](./widgets-and-key-bindings.md)
+
+By default, both are `%`. Learn more at [Configuration variables](./configuration-variables.md).
+
+An illustration:
+
+```shell
+% ABBR_EXPANSION_CURSOR_MARKER=+
+% abbr a=b+c+d%e
+% a # after one [Space]: b[CURSOR]c+d%e
+    # after a second [Space]: bc+d[CURSOR]e
+    #  *not* bc[CURSOR]d%e because the
+    #  second [Space] didn't expand an abbreviation
+```
