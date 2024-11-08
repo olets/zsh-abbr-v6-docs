@@ -64,27 +64,36 @@ And now, typing `xyz`<kbd>Space</kbd> places the cursor again:
 
 ## Advanced usage
 
-The "marker" doesn't have to be `%`. Customize it with the `ABBR_LINE_CURSOR_MARKER` configuration variable. Learn more at [Configuration variables](./configuration-variables.md).
+- The "marker" doesn't have to be `%`. Customize it with the `ABBR_LINE_CURSOR_MARKER` configuration variable. Learn more at [Configuration variables](./configuration-variables.md).
 
-The trigger doesn't have to be <kbd>Space</kbd>. Learn more at [Widgets and key bindings](./widgets-and-key-bindings.md).
+- The trigger doesn't have to be <kbd>Space</kbd>. Learn more at [Widgets and key bindings](./widgets-and-key-bindings.md).
 
-### Multiple markers
+- The _expansion_ cursor placement and _line_ cursor placement systems can use distinct "markers". One (`ABBR_LINE_CURSOR_MARKER`) is jumped to by the `abbr-expand-and-insert` widget[^1] _regardless_ of whether an abbreviation was expanded. The other (`ABBR_EXPANSION_CURSOR_MARKER`) is jumped to by the `abbr-expand` widget[^2] _when_ an abbreviation is expanded.
 
-You can have two distinct cursor markers. One (`ABBR_LINE_CURSOR_MARKER`) is jumped to by the `abbr-expand-and-insert` widget[^1]  _regardless_ of whether an abbreviation was expanded. The other (`ABBR_EXPANSION_CURSOR_MARKER`) is jumped to by the `abbr-expand` widget[^2] _when_ an abbreviation is expanded.
+    [^1]: In the default configuration, `abbr-expand` is bound to <kbd>Space</kbd>.
 
-[^1]: In the default configuration, `abbr-expand` is bound to <kbd>Space</kbd>.
+    [^2]: `abbr-expand` is triggered indirectly by `abbr-expand-and-insert`. You can also bind it directly to a key - learn more at [Widgets and key bindings](./widgets-and-key-bindings.md)
 
-[^2]: `abbr-expand` is triggered indirectly by `abbr-expand-and-insert`. You can also bind it directly to a key - learn more at [Widgets and key bindings](./widgets-and-key-bindings.md)
+    By default, both are `%`. Learn more at [Configuration variables](./configuration-variables.md).
 
-By default, both are `%`. Learn more at [Configuration variables](./configuration-variables.md).
+    An illustration:
 
-An illustration:
+    ```shell
+    # .zshrc
 
-```shell
-% ABBR_EXPANSION_CURSOR_MARKER=+
-% abbr a=b+c+d%e
-% a # after one [Space]: b[CURSOR]c+d%e
-    # after a second [Space]: bc+d[CURSOR]e
-    #  *not* bc[CURSOR]d%e because the
-    #  second [Space] didn't expand an abbreviation
-```
+    ABBR_SET_EXPANSION_CURSOR=1
+    ABBR_SET_LINE_CURSOR=1
+    ABBR_EXPANSION_CURSOR_MARKER=+
+    # load zsh-abbr here
+    ```
+
+    ```shell:no-line-numbers
+    % abbr a=b+c+d%e
+    % a # after one [Space]: b[CURSOR]c+d%e
+        #   because [Space] expanded an abbreviation
+        #
+        # after a second [Space]: bc+d[CURSOR]e
+        #   *not* bc[CURSOR]d%e
+        #   because the second [Space]
+        #   didn't expand an abbreviation
+    ```
