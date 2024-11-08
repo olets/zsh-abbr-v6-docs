@@ -32,7 +32,7 @@ And now, typing `xyz` and then <kbd>Space</kbd> places the cursor again:
 
 ## Advanced usage
 
-Customize the cursor "marker" with the `ABBR_LINE_CURSOR_MARKER` configuration variable. Learn more at [Configuration variables](./configuration-variables.md).
+The "marker" doesn't have to be `%`. Customize it with the `ABBR_LINE_CURSOR_MARKER` configuration variable. Learn more at [Configuration variables](./configuration-variables.md).
 
 The trigger doesn't have to be <kbd>Space</kbd>. Learn more at [Widgets and key bindings](./widgets-and-key-bindings.md).
 
