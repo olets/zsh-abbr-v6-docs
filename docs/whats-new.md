@@ -16,4 +16,4 @@ Highlights in 6.x
 
 - <Badge type="warning">Since 6.0.0</Badge> [Reminders](./reminders.md)
 
-    Optionally get "you have an abbreviation you could have used for the command you just ran" reminders. zsh-abbr can log the reminder messages to your terminal, or you can use the results in your own zsh hook.
+    Optionally get "you have an abbreviation you could have used for the command you just ran" reminders. zsh-abbr can automatically print the reminder messages in your terminal, or you can use the results in your own zsh hook.
