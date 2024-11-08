@@ -1,8 +1,8 @@
 # Cursor placement
 
-zsh-abbr can change the position of your cursor. This unlocks "template" abbreviations.
+## Basic usage
 
-### Basic usage
+zsh-abbr can change the position of your cursor. This unlocks "template" abbreviations.
 
 Toggle the cursor placement system on:
 
