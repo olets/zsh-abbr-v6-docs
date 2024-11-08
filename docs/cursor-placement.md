@@ -25,13 +25,13 @@ Now, under the default configuration, <kbd>Space</kbd> will jump the cursor to t
 
 Now typing `a` and then <kbd>Space</kbd> expands the abbreviation and places the cursor:
 
-```
+```shell
 % my command --flag=[CURSOR IS HERE] --another-flag %
 ```
 
 And now, typing `xyz` and then <kbd>Space</kbd> places the cursor again:
 
-```
+```shell
 % my command --flag=xyz --another-flag [CURSOR IS HERE]
 ```
 
