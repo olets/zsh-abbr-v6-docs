@@ -5,9 +5,52 @@ These docs are for the not-yet-released v6.
 For v5 docs visit <https://zsh-abbr.olets.dev>
 :::
 
-Are you're forgetting to take advantage of the abbreviations you've added? Toggle on reminders.
+## Basics
 
-`ABBR_GET_AVAILABLE_ABBREVIATION` enables and disables the reminders system.
+Are you're forgetting to take advantage of the abbreviations you've added? Want reminders?
+
+Enable the reminders system and the reminders notifier:
+
+```shell
+# .zshrc
+
+ABBR_GET_AVAILABLE_ABBREVIATION=1
+ABBR_LOG_AVAILABLE_ABBREVIATION=1
+```
+
+Now if you miss using one of your abbreviations, a reminder message will be logged in the terminal.
+
+```
+% abbr a=b
+% b[Enter]
+abbr: `a` is your regular user abbreviation for `b`
+```
+
+By default, the message prints before command output, if any.
+
+```shell
+% abbr hw="echo hello world"
+% echo hello world
+abbr: `a` is your regular user abbreviation for `b`
+hello world
+```
+
+If you prefer to have it print after the command output, toggle on `ABBR_LOG_AVAILABLE_ABBREVIATION_AFTER`:
+
+```shell
+# .zshrc
+
+ABBR_GET_AVAILABLE_ABBREVIATION=1
+ABBR_LOG_AVAILABLE_ABBREVIATION=1
+ABBR_LOG_AVAILABLE_ABBREVIATION_AFTER=1
+```
+
+```shell
+% abbr hw="echo hello world"
+% echo hello world
+hello world
+abbr: `a` is your regular user abbreviation for `b`
+```
 
 ::: info
 The reminders system cannot distinguish between a command you typed and a command you pulled up from history. For example, with the reminders system on and reminder logging on:
@@ -28,8 +71,21 @@ abbr: `a` is your global user abbreviation for `b`
 But _you_ know you didn't miss using the abbreviation!
 :::
 
-If the reminders system is on and you miss using one of your abbreviations, `ABBR_UNUSED_ABBREVIATION`, `ABBR_UNUSED_ABBREVIATION_EXPANSION`, `ABBR_UNUSED_ABBREVIATION_PREFIX`, `ABBR_UNUSED_ABBREVIATION_SCOPE`, and `ABBR_UNUSED_ABBREVIATION_TYPE` will be set. You could use these in your prompt, or in a `precmd` hook.
+## Advanced
 
-You don't have to roll your notifier though. Toggle `ABBR_LOG_AVAILABLE_ABBREVIATION` on, and if the reminders system is on and you miss using one of your abbreviations, a reminder message will be logged in the terminal. By default the message prints before command output (the logger will run as a preexec hook); if you prefer to have it print after the command output, toggle on `ABBR_LOG_AVAILABLE_ABBREVIATION_AFTER` (the logger will run as a precmd hook).
+The reminders system sets several variables:
 
-Learn how to configure prefixes in [Configuration variables](./configuration-variables.md).
+- `ABBR_UNUSED_ABBREVIATION` is the abbreviation you could have used
+- `ABBR_UNUSED_ABBREVIATION_EXPANSION` is what you typed instead
+- `ABBR_UNUSED_ABBREVIATION_PREFIX` is the prefix you would have to use along with the abbreviation, if any (learn more at [Prefixes](./prefixes.md))
+- `ABBR_UNUSED_ABBREVIATION_SCOPE` is the scope of the abbreviation you could have used (learn more at [Scopes](./scopes.md))
+- `ABBR_UNUSED_ABBREVIATION_TYPE` is the type of the abbreviation you could have used (learn more at [Types](./types.md))
+
+Advanced users might choose to do something with these values. For example, with a `precmd` hook you could use them to customize your prompt. You might want to not enable the reminders notifier:
+
+```shell
+# .zshrc
+
+ABBR_GET_AVAILABLE_ABBREVIATION=1
+# leave ABBR_LOG_AVAILABLE_ABBREVIATION unset
+```

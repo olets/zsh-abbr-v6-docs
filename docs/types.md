@@ -24,8 +24,10 @@ In the following examples, regular abbreviations expand at the start of the line
 ```shell
 % abbr hw="echo hello world"
 Added the regular user abbreviation `hw`
+
 % hw[Enter] # expands to `echo hello world` and runs
 hello world
+
 % echo foo && hw[Enter] # runs without expanding `hw`
 foo
 zsh: command not found: hw
@@ -34,18 +36,22 @@ zsh: command not found: hw
 ```shell
 % abbr --regular l="echo longhand"
 Added the regular user abbreviation `l`
+
 % l[Enter] # expands to `echo longhand` and runs
 longhand
-% echo foo && l[Enter] #runs without expanding  `l`
+
+% echo foo && l[Enter] # runs without expanding  `l`
 zsh: command not found: l
 ```
 
 ```shell
 % abbr -r s="echo shorthand"
 Added the regular user abbreviation `s`
+
 % s[Enter] # expands to `echo shorthand` and runs
 shorthand
-% echo foo && s[Enter] #runs without expanding  `s`
+
+% echo foo && s[Enter] # runs without expanding  `s`
 zsh: command not found: s
 ```
 
@@ -61,8 +67,10 @@ In the following examples, global abbreviations expand at the start of the line 
 ```shell
 % abbr -g hw="echo hello world"
 Added the global user abbreviation `hw`
+
 % hw[Enter] # expands to `echo hello world` and runs
 hello world
+
 % echo foo && hw[Enter] # expands to `echo foo && echo hello world` and runs
 foo
 hello world
@@ -71,8 +79,10 @@ hello world
 ```shell
 % abbr --global l="echo longhand"
 Added the global user abbreviation `l`
+
 % l[Enter] # expands to `echo longhand` and runs
 longhand
+
 % echo foo && l[Enter] # expands to `echo foo && echo longhand` and runs
 foo
 longhand
@@ -81,8 +91,10 @@ longhand
 ```shell
 % abbr -g s="echo shorthand"
 Added the global user abbreviation `s`
+
 % s[Enter] # expands to `echo shorthand` and runs
 shorthand
+
 % echo foo && s[Enter] # expands to `echo foo && echo shorthand` and runs
 foo
 shorthand

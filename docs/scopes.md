@@ -25,24 +25,29 @@ In the following example, user abbreviations created in terminal 1 _are_ availab
 
 ```shell
 # terminal 1
+
 % abbr hw="echo hello world"
 Added the regular user abbreviation `hw`
+
 % hw[Enter] # expands to `echo hello world` and runs the command
 hello world
 
 % abbr --user l="echo longhand"
 Added the regular user abbreviation `l`
+
 % l[Enter] # expands to `echo longhand` and runs the command
 longhand
 
 % abbr -U s="echo shorthand"
 Added the regular user abbreviation `l`
+
 % s[Enter] # expands to `echo shorthand` and runs the command
 shorthand
 ```
 
 ```shell
 # terminal 2
+
 % hw[Enter] # expands to `echo hello world` and runs the command
 hello world
 
@@ -63,35 +68,46 @@ In the following example, session abbreviations created in terminal 1 _are not_ 
 
 ```shell
 # terminal 1
+
 % abbr --session hw="echo hello world"
 Added the regular session abbreviation `hw`
+
 % hw[Enter] # expands to `echo hello world` and runs the command
 hello world
+
 % abbr -S s="echo shorthand"
 Added the regular session abbreviation `s`
+
 % s[Enter] # expands to `echo shorthand` and runs the command
 shorthand
 ```
 
 ```shell
 # terminal 2
+
 % hw[Enter] # no expansion. abbreviation is scoped to terminal 1
 zsh: command not found: hw
+
 % s[Enter] # no expansion. abbreviation is scoped to terminal 1
 zsh: command not found: s
 ```
 
-For many users, session scope can be thought of as "scoped to the current terminal". In fact, it is more restrictive. In the following example, a session abbreviation is not available to a subshell:
+For many users, session scope can reasonably be thought of as "scoped to the current terminal". In fact, it is more restrictive. In the following example, a session abbreviation is not available to a subshell:
 
 ```shell
 % abbr --session hw="echo hello world"
 Added the regular session abbreviation `hw`
+
 % hw[Enter] # expands to `echo hello world` and runs the command
 hello world
+
 % zsh
+
 % hw[Enter] # no expansion. abbreviation is scoped to terminal 1
 zsh: command not found: hw
+
 % exit
+
 % hw[Enter] # expands to `echo hello world` and runs the command
 hello world
 ```

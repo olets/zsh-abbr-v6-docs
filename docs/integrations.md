@@ -20,7 +20,9 @@ To highlight user abbreviations that will expand, [fast-syntax-highlighting](htt
 > 1. Only and all of the abbreviations defined when the shell was started will be highlighted. fast-syntax-highlighting won't know about any abbreviation additions, erasures, or renames. To update fast-syntax-highlighting, open a new terminal, or restart the shell by running `exec zsh`.
 
 ```shell
- load zsh-abbr, then
+# .zshrc
+
+# load zsh-abbr, then
 
 chroma_single_word() {
   (( next_word = 2 | 8192 ))
@@ -69,9 +71,10 @@ Replace `<styles for …>` with a [zsh character highlighting](http://zsh.source
 Linux:
 
 ```shell
- load zsh-abbr, then
+# .zshrc
 
- make sure to replace `<styles for …>` (read above)
+# load zsh-abbr, then
+# make sure to replace `<styles for …>` (read above)
 
 (( ${#ABBR_REGULAR_USER_ABBREVIATIONS} )) && {
   ZSH_HIGHLIGHT_HIGHLIGHTERS+=(regexp)
@@ -83,9 +86,10 @@ Linux:
 macOS:
 
 ```shell
- load zsh-abbr, then
+# .zshrc
 
- make sure to replace `<styles for …>` (read above)
+# load zsh-abbr, then
+# make sure to replace `<styles for …>` (read above)
 
 (( ${#ABBR_REGULAR_USER_ABBREVIATIONS} )) && {
   ZSH_HIGHLIGHT_HIGHLIGHTERS+=(regexp)
@@ -113,11 +117,11 @@ bindkey -v
 
 ## macOS System Text Substitutions
 
-Add the following snippet to your `.zshrc` file to create abbreviation for all macOS text substitutions.
+Run following snippet in your terminal to create regular user abbreviations for all your macOS text substitutions (to create session and/or global abbreviations, modify the `abbr add` line).
 
 ```shell
 for substitution in ${(f)"$(defaults read ~/Library/Preferences/.GlobalPreferences.plist NSUserDictionaryReplacementItems | plutil -convert json -o - - | jq -r 'to_entries[] | "\(.value.replace)=\(.value.with)"')"}; do
-  abbr add [options] "$substitution"
+  abbr add "$substitution"
 done
 ```
 

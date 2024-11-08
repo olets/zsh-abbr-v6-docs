@@ -15,15 +15,21 @@ Toggle the "expansion cursor placement" system on:
 ABBR_SET_EXPANSION_CURSOR=1
 ```
 
-and use the `ABBR_EXPANSION_CURSOR_MARKER` (default: `%`) in your abbreviations
+and use the "expansion cursor marker" in your abbreviations (default: `%`; learn more at [Configuration variables > `ABBR_EXPANSION_CURSOR_MARKER`](./configuration-variables.md))
 
 ```shell
 % abbr git m='commit -m "%"'
 Added the regular user abbreviation `m`
 Added the global user abbreviation `git m`
-% m[SPACE] # expands to `git commit -m ""` with the cursor between the quotation marks
 ```
 
+Now, typing `m`<kbd>Space</kbd> expands the abbreviation `m` and replaces the expansion's first expansion cursor marker with the cursor:
+
+> `git commit -m "`<kbd>Cursor</kbd>`"`
+
+&nbsp;
+
+::: tip
 You can use this to disable the trailing space after expanding abbreviations with <kbd>Space</kbd> in the default config:
 
 ```shell
@@ -31,6 +37,7 @@ You can use this to disable the trailing space after expanding abbreviations wit
 % abbr b="no trailing space%"
 % a[Space]b[Space] # expands to `trailing space no trailing space`
 ```
+:::
 
 ## Place the cursor, regardless of expansion
 
@@ -50,17 +57,13 @@ Now, under the default configuration, <kbd>Space</kbd> will jump the cursor to t
 % abbr a='my command --flag=% --another-flag %'
 ```
 
-Now typing `a`<kbd>Space</kbd> expands the abbreviation and places the cursor:
+Now typing `a`<kbd>Space</kbd> expands the abbreviation and then replaces the line's first _line_ cursor marker (`%` by default) with the cursor:
 
-```shell
-% my command --flag=[CURSOR IS HERE] --another-flag %
-```
+> `my command --flag=`<kbd>Cursor</kbd>` --another-flag %`
 
-And now, typing `xyz`<kbd>Space</kbd> places the cursor again:
+From here, typing `xyz`<kbd>Space</kbd> places the cursor again:
 
-```shell
-% my command --flag=xyz --another-flag [CURSOR IS HERE]
-```
+> `my command --flag=xyz --another-flag `<kbd>Cursor</kbd>
 
 ## Advanced usage
 
@@ -89,11 +92,8 @@ And now, typing `xyz`<kbd>Space</kbd> places the cursor again:
 
     ```shell
     % abbr a=b+c+d%e
-    % a # after one [Space]: b[CURSOR]c+d%e
-        #   because [Space] expanded an abbreviation
-        #
-        # after a second [Space]: bc+d[CURSOR]e
-        #   *not* bc[CURSOR]d%e
-        #   because the second [Space]
-        #   didn't expand an abbreviation
     ```
+
+    Now, typing `a`<kbd>Space</kbd> will change the line to `b`<kbd>Cursor</kbd>`c+d%e`. The cursor replaces the abbreviation's first expansion cursor marker because <kbd>Space</kbd> expanded an abbreviation.
+    
+    Typing <kbd>Space</kbd> a second time will change the line to `bc+d`<kbd>Cursor</kbd>`e`. The cursor doesn't replace the line's next _expansion_ cursor marker, because no abbreviation was expanded; instead the cursor replaces the line's next _line_ cursor marker.
