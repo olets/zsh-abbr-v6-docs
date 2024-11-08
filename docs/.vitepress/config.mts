@@ -245,6 +245,10 @@ export default defineConfig({
             collapsed: false,
             items: [
               {
+                text: "Cursor placement",
+                link: "/cursor-placement",
+              },
+              {
                 text: "History",
                 link: "/history",
               },
