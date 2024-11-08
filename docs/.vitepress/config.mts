@@ -1,4 +1,5 @@
 import { defineConfig } from "vitepress";
+import markdownItFootnote from "markdown-it-footnote";
 
 const description = "The zsh manager for auto-expanding abbreviations";
 const siteTitle = "zsh-abbr";
@@ -162,6 +163,11 @@ export default defineConfig({
     theme: {
       light: "github-light-high-contrast",
       dark: "github-dark-high-contrast",
+    },
+    // add more plugins
+    // https://vitepress.dev/guide/markdown#advanced-configuration
+    config: (md) => {
+      md.use(markdownItFootnote);
     },
   },
   themeConfig: {
