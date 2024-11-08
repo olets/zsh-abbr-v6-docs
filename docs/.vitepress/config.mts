@@ -1,7 +1,6 @@
 import { defineConfig } from "vitepress";
 
-const description =
-  "The zsh manager for auto-expanding abbreviations, inspired by fish.";
+const description = "The zsh manager for auto-expanding abbreviations";
 const siteTitle = "zsh-abbr";
 
 // https://vitepress.dev/reference/site-config
