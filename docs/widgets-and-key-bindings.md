@@ -23,7 +23,7 @@ Widget | Behavior | Default binding
 
 `abbr-expand-and-space` was deprecated in v5.4.0 and dropped in v6.0.0. Use `abbr-expand-and-insert` instead.
 
-zsh-abbr also binds <kbd>Ctrl Space</kbd> (`"^ "`) to `magic-space` and, in search mode, <kbd>Space</kbd> (`-M isearch " "`) to `magic-space`.
+zsh-abbr also binds <kbd>Ctrl</kbd><kbd>Space</kbd> (`"^ "`) to `magic-space` and, in search mode, <kbd>Space</kbd> (`-M isearch " "`) to `magic-space`.
 
 In the following example, additional bindings are added such that <kbd>Ctrl</kbd><kbd>e</kbd> expands abbreviations without adding a trailing space and <kbd>Ctrl</kbd><kbd>a</kbd> has the same behavior as <kbd>Space</kbd>.
 
