@@ -1,5 +1,10 @@
 # Cursor placement
 
+:::danger
+These docs are for the not-yet-released v6.  
+For v5 docs visit <https://zsh-abbr.olets.dev>
+:::
+
 ## Basic usage
 
 zsh-abbr can change the position of your cursor. This unlocks "template" abbreviations.
