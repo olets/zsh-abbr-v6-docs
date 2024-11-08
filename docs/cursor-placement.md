@@ -5,13 +5,40 @@ These docs are for the not-yet-released v6.
 For v5 docs visit <https://zsh-abbr.olets.dev>
 :::
 
-## Basic usage
+## Place the cursor after expanding abbreviations
 
-zsh-abbr can change the position of your cursor. This unlocks "template" abbreviations.
+Toggle the "expansion cursor placement" system on:
 
-Toggle the cursor placement system on:
+```shell:no-line-numbers
+# .zshrc
+
+ABBR_SET_EXPANSION_CURSOR=1
+```
+
+and use the `ABBR_EXPANSION_CURSOR_MARKER` (default: `%`) in your abbreviations
 
 ```shell
+% abbr git m='commit -m "%"'
+Added the regular user abbreviation `m`
+Added the global user abbreviation `git m`
+% m[SPACE] # expands to `git commit -m ""` with the cursor between the quotation marks
+```
+
+You can use this to disable the trailing space after expanding abbreviations with <kbd>Space</kbd> in the default config:
+
+```shell
+% abbr a="trailing space"
+% abbr b="no trailing space%"
+% a[Space]b[Space] # expands to `trailing space no trailing space`
+```
+
+## Place the cursor, regardless of expansion
+
+zsh-abbr can change the position of your cursor even when you aren't expanding abbreviations. This unlocks "template" abbreviations.
+
+Toggle the "line cursor placement" system on:
+
+```shell:no-line-numbers
 # .zshrc
 
 ABBR_SET_LINE_CURSOR=1
