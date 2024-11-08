@@ -2,14 +2,14 @@ import { defineConfig } from "vitepress";
 
 const description =
   "The zsh manager for auto-expanding abbreviations, inspired by fish.";
-const title = "zsh-abbr";
+const siteTitle = "zsh-abbr";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: title,
   description: description,
   // https://vitepress.dev/reference/site-config#titletemplate
-  titleTemplate: `:title :: ${title}`, // to change delimiter from default pipe to play nice with Fathom event id format. see also homepage frontmatter
+  titleTemplate: `:title :: ${siteTitle}`, // to change delimiter from default pipe to play nice with Fathom event id format. see also homepage frontmatter
   // https://vitepress.dev/reference/default-theme-last-updated
   lastUpdated: true,
 
@@ -71,7 +71,7 @@ export default defineConfig({
     ],
 
     // social metas
-    ["meta", { property: "og:title", content: "zsh-abbr" }],
+    ["meta", { property: "og:title", content: siteTitle }],
     [
       "meta",
       {
@@ -87,7 +87,7 @@ export default defineConfig({
         content: "https://zsh-abbr.olets.dev/",
       },
     ],
-    ["meta", { property: "og:site_name", content: "zsh-abbr" }],
+    ["meta", { property: "og:site_name", content: siteTitle }],
     ["meta", { property: "og:type", content: "website" }],
     [
       "meta",
@@ -98,7 +98,7 @@ export default defineConfig({
     ],
     ["meta", { property: "og:image:width", content: "1200" }],
     ["meta", { property: "og:image:height", content: "630" }],
-    ["meta", { name: "twitter:title", content: "zsh-abbr" }],
+    ["meta", { name: "twitter:title", content: siteTitle }],
     ["meta", { name: "twitter:card", content: "summary_large_image" }],
     [
       "meta",
