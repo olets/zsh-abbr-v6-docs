@@ -7,19 +7,19 @@ For v5 docs visit <https://zsh-abbr.olets.dev>
 
 Delete the session data storage directory
 
-```shell:no-line-numbers
+```shell
 % rm -rf $ABBR_TMPDIR
 ```
 
 If you want to delete the user abbreviations file,
 
-```shell:no-line-numbers
+```shell
 % rm $ABBR_USER_ABBREVIATIONS_FILE
 ```
 
 If you haven't customized `$ABBR_USER_ABBREVIATIONS_FILE`, you will probably want to delete its parent directory
 
-```shell:no-line-numbers
+```shell
 # check whether there's anything in there
 % ls $ABBR_USER_ABBREVIATIONS_FILE:h
 # IF you want to delete it

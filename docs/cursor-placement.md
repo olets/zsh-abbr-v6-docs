@@ -9,7 +9,7 @@ For v5 docs visit <https://zsh-abbr.olets.dev>
 
 Toggle the "expansion cursor placement" system on:
 
-```shell:no-line-numbers
+```shell
 # .zshrc
 
 ABBR_SET_EXPANSION_CURSOR=1
@@ -38,7 +38,7 @@ zsh-abbr can change the position of your cursor even when you aren't expanding a
 
 Toggle the "line cursor placement" system on:
 
-```shell:no-line-numbers
+```shell
 # .zshrc
 
 ABBR_SET_LINE_CURSOR=1
@@ -87,7 +87,7 @@ And now, typing `xyz`<kbd>Space</kbd> places the cursor again:
     # load zsh-abbr here
     ```
 
-    ```shell:no-line-numbers
+    ```shell
     % abbr a=b+c+d%e
     % a # after one [Space]: b[CURSOR]c+d%e
         #   because [Space] expanded an abbreviation

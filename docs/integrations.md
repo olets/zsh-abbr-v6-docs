@@ -68,7 +68,6 @@ Replace `<styles for …>` with a [zsh character highlighting](http://zsh.source
 
 Linux:
 
-<!-- has line numbers because these are lines in a file -->
 ```shell
  load zsh-abbr, then
 
@@ -83,7 +82,6 @@ Linux:
 
 macOS:
 
-<!-- has line numbers because these are lines in a file -->
 ```shell
  load zsh-abbr, then
 
@@ -98,7 +96,7 @@ macOS:
 
 After adding the snippets, all new terminals will use them. To use them in an already-open terminal, restart zsh in that terminal:
 
-```shell:no-line-numbers
+```shell
 exec zsh
 ```
 
@@ -106,18 +104,18 @@ exec zsh
 
 Switching to vi mode —with `bindkey -v` or software which calls `bindkey -v` — will wipe out the keybindings zsh-abbr's interactive behavior relies on. If you use vi mode, enable it before initializing zsh-abbr. 
 
-```shell{4}:no-line-numbers
- .zshrc
+```shell
+# .zshrc
 
 bindkey -v
- load zsh-abbr here
+# load zsh-abbr here
 ```
 
 ## macOS System Text Substitutions
 
 Add the following snippet to your `.zshrc` file to create abbreviation for all macOS text substitutions.
 
-```shell:no-line-numbers
+```shell
 for substitution in ${(f)"$(defaults read ~/Library/Preferences/.GlobalPreferences.plist NSUserDictionaryReplacementItems | plutil -convert json -o - - | jq -r 'to_entries[] | "\(.value.replace)=\(.value.with)"')"}; do
   abbr add [options] "$substitution"
 done

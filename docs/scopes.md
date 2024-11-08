@@ -23,7 +23,7 @@ To scope a zsh-abbr command to the user, pass the `--user` flag or its shorthand
 
 In the following example, user abbreviations created in terminal 1 _are_ available in terminal 2.
 
-```shell{3,8,13}:no-line-numbers
+```shell
 # terminal 1
 % abbr hw="echo hello world"
 Added the regular user abbreviation `hw`
@@ -41,7 +41,7 @@ Added the regular user abbreviation `l`
 shorthand
 ```
 
-```shell{2,4,6}:no-line-numbers
+```shell
 # terminal 2
 % hw[Enter] # expands to `echo hello world` and runs the command
 hello world
@@ -61,7 +61,7 @@ To scope a zsh-abbr command to the session, pass the `--session` flag or its sho
 
 In the following example, session abbreviations created in terminal 1 _are not_ available in terminal 2.
 
-```shell{4,8}:no-line-numbers
+```shell
 # terminal 1
 % abbr --session hw="echo hello world"
 Added the regular session abbreviation `hw`
@@ -73,7 +73,7 @@ Added the regular session abbreviation `s`
 shorthand
 ```
 
-```shell{3,5}:no-line-numbers
+```shell
 # terminal 2
 % hw[Enter] # no expansion. abbreviation is scoped to terminal 1
 zsh: command not found: hw
@@ -83,7 +83,7 @@ zsh: command not found: s
 
 For many users, session scope can be thought of as "scoped to the current terminal". In fact, it is more restrictive. In the following example, a session abbreviation is not available to a subshell:
 
-```shell{5-7}:no-line-numbers
+```shell
 % abbr --session hw="echo hello world"
 Added the regular session abbreviation `hw`
 % hw[Enter] # expands to `echo hello world` and runs the command

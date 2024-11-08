@@ -11,7 +11,7 @@ zsh-abbr has broad capabilities for managing abbreviations. Add, rename, erase, 
 
 **Add** an abbreviation with `abbr <ABBREVIATION>=<EXPANSION>`:
 
-```shell{1-2}:no-line-numbers
+```shell
 % abbr hw="echo hello world"
 Added the regular user abbreviation `hw`
 %
@@ -23,7 +23,7 @@ Added the regular user abbreviation `hw`
 
 <kbd>Space</kbd> **expands** abbreviations:
 
-```shell{3}:no-line-numbers
+```shell
 % abbr hw="echo hello world"
 Added the regular user abbreviation `hw`
 % hw[Space] # expands to `echo hello world `
@@ -31,7 +31,7 @@ Added the regular user abbreviation `hw`
 
 <kbd>Enter</kbd> **expands and accepts** abbreviations:
 
-```shell{3}:no-line-numbers
+```shell
 % abbr hw="echo hello world"
 Added the regular user abbreviation `hw`
 % hw[Enter] # expands to `echo hello world` and runs the command
@@ -43,7 +43,7 @@ hello world
 
 As demonstrated above, the EXPANSION can be more than one word. The ABBREVIATION can be too. This lets you create context-dependent abbreviations:
 
-```shell{3-4}:no-line-numbers
+```shell
 % abbr "git cp"="git cherry-pick"
 Added the regular user abbreviation `git cp`
 % cp[Space] # no special behavior. you can use cp as usual
@@ -52,7 +52,7 @@ Added the regular user abbreviation `git cp`
 
 This lets you compose multi-stage abbreviations:
 
-```shell{1,4,6-7}:no-line-numbers
+```shell
 % abbr g=git
 Added the regular user abbreviation `g`
 % g[Space] # expands to `git `

@@ -77,18 +77,18 @@ For v5 docs visit <https://zsh-abbr.olets.dev>
     - Plugin manager: use your manager to install zsh-abbr from branch `v5`.
     - Homebrew:
         install v4
-        ```shell:no-line-numbers
+        ```shell
         brew uninstall --force zsh-abbr && brew install olets/tap/zsh-abbr@5
         ```
         and follow the post-install instructions logged to the terminal.
     - Manual:
       - either download the latest v5.x's archive from <https://github.com/olets/zsh-abbr/releases>
       - or clone the `v5` branch:
-          ```shell:no-line-numbers
+          ```shell
           git clone https://github.com/olets/zsh-abbr --single-branch --branch v5 --depth 1
           ```
 1. Restart zsh 
-    ```shell:no-line-numbers
+    ```shell
     exec zsh
     ```
 

@@ -21,7 +21,7 @@ To scope a zsh-abbr command to the user, pass the `--regular` flag or its shorth
 
 In the following examples, regular abbreviations expand at the start of the line but not in other positions:
 
-```shell{5}:no-line-numbers
+```shell
 % abbr hw="echo hello world"
 Added the regular user abbreviation `hw`
 % hw[Enter] # expands to `echo hello world` and runs
@@ -31,7 +31,7 @@ foo
 zsh: command not found: hw
 ```
 
-```shell{5}:no-line-numbers
+```shell
 % abbr --regular l="echo longhand"
 Added the regular user abbreviation `l`
 % l[Enter] # expands to `echo longhand` and runs
@@ -40,7 +40,7 @@ longhand
 zsh: command not found: l
 ```
 
-```shell{5}:no-line-numbers
+```shell
 % abbr -r s="echo shorthand"
 Added the regular user abbreviation `s`
 % s[Enter] # expands to `echo shorthand` and runs
@@ -58,7 +58,7 @@ To scope a zsh-abbr command to the user, pass the `--global` flag or its shortha
 In the following examples, global abbreviations expand at the start of the line and also in other positions:
 
 
-```shell{5}:no-line-numbers
+```shell
 % abbr -g hw="echo hello world"
 Added the global user abbreviation `hw`
 % hw[Enter] # expands to `echo hello world` and runs
@@ -68,7 +68,7 @@ foo
 hello world
 ```
 
-```shell{5}:no-line-numbers
+```shell
 % abbr --global l="echo longhand"
 Added the global user abbreviation `l`
 % l[Enter] # expands to `echo longhand` and runs
@@ -78,7 +78,7 @@ foo
 longhand
 ```
 
-```shell{5}:no-line-numbers
+```shell
 % abbr -g s="echo shorthand"
 Added the global user abbreviation `s`
 % s[Enter] # expands to `echo shorthand` and runs

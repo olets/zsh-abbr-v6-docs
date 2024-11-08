@@ -11,7 +11,7 @@ For v5 docs visit <https://zsh-abbr.olets.dev>
 
 zsh-abbr is available on Homebrew. Run
 
-```shell:no-line-numbers
+```shell
 brew install olets/tap/zsh-abbr
 ```
 
@@ -22,13 +22,13 @@ and follow the post-install instructions logged to the terminal.
 
 Want to stay on this major version until you _choose_ to upgrade to the next? When installing zsh-abbr with Homebrew for the first time, run
 
-```shell:no-line-numbers
+```shell
 brew install olets/tap/zsh-abbr@6
 ```
 
 If you've already installed `olets/tap/zsh-abbr` with Homebrew, you can switch to the v6 formula by running
 
-```shell:no-line-numbers
+```shell
 brew uninstall --force zsh-abbr && brew install olets/tap/zsh-abbr@6
 ```
 :::
@@ -56,7 +56,7 @@ Want to stay on this major version until you _choose_ to upgrade to the next? Us
 
 After adding the plugin to the manager, it will be available in all new terminals. To use it in an already-open terminal, restart zsh in that terminal:
 
-```shell:no-line-numbers
+```shell
 exec zsh
 ```
 
@@ -64,13 +64,13 @@ exec zsh
 
 - Either download the archive of the release of your choice from <https://github.com/olets/zsh-abbr/releases> and expand it (ensures you have the latest official release)
 - or clone a single branch:
-    ```shell:no-line-numbers
+    ```shell
     git clone https://github.com/olets/zsh-abbr --single-branch --branch <branch> --depth 1
     ```
     Replace `<branch>` with a branch name. Good options are `main` (for the latest stable release), `next` (for the latest release, even if it isn't stable), or `v6` (for releases in this major version).
 
 Then add `source path/to/zsh-abbr.zsh` to your `.zshrc` (replace `path/to/` with the real path), and restart zsh:
 
-```shell:no-line-numbers
+```shell
 exec zsh
 ```

@@ -27,7 +27,7 @@ zsh-abbr also binds <kbd>Ctrl</kbd><kbd>Space</kbd> (`"^ "`) to `magic-space` an
 
 In the following example, additional bindings are added such that <kbd>Ctrl</kbd><kbd>e</kbd> expands abbreviations without adding a trailing space and <kbd>Ctrl</kbd><kbd>a</kbd> has the same behavior as <kbd>Space</kbd>.
 
-```shell{3-4}:no-line-numbers
+```shell
 # .zshrc
 
 bindkey "^E" abbr-expand
@@ -36,7 +36,7 @@ bindkey "^A" abbr-expand-and-insert
 
 To prevent the creation of the default bindings, set `ABBR_DEFAULT_BINDINGS` to `0` before initializing zsh-abbr. In the following example, <kbd>Ctrl</kbd><kbd>Space</kbd> expands abbreviations and <kbd>Space</kbd> is not bound to any zsh-abbr widget.
 
-```shell{3-4}:no-line-numbers
+```shell
 # .zshrc
 
 ABBR_DEFAULT_BINDINGS=0
@@ -48,7 +48,7 @@ bindkey "^ " abbr-expand-and-insert
 
 By default, zsh-abbr is only enabled for the default keymap. To enable a widget for another keymap, run `bindkey -M`. For example, the following extends zsh-abbr's default behavior to the `viins` keymap:
 
-```shell:no-line-numbers
+```shell
 # .zshrc
 
 bindkey -M viins " " abbr-expand-and-insert
