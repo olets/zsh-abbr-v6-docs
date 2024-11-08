@@ -4,19 +4,7 @@ Highlights in 6.x
 
 - <Badge type="warning">Since 6.0.0</Badge> [History](./history.md)
 
-    Optionally save the abbreviation to your shell history when running
-    
-    ```shell
-    <abbreviation>[Space]
-    ```
-
-    When running 
-    
-    ```shell
-    other stuff <global abbreviation>[Enter]
-    ```
-
-    optionally save the abbreviation _or_ first the abbreviation and then the entire line containing the abbreviation to your history.
+    When expanding an abbreviation, optionally save the abbreviation to your shell history.
 
 - <Badge type="warning">Since 6.0.0</Badge> [Prefixes](./prefixes.md)
 
