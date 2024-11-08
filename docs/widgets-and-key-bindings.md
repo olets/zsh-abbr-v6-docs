@@ -18,8 +18,8 @@ There are three available widgets:
 Widget | Behavior | Default binding
 ---|---|---
 `abbr-expand` | If following an abbreviation, expands it | Not bound
-`abbr-expand-and-accept` | If following an abbreviation, expands it; then accepts the line | <kbd>Enter</kbd> (`" "`)
-`abbr-expand-and-insert` | If following an abbreviation, expands it; then adds a space | <kbd>Space</kbd> (`"^ "`); in search mode, <kbd>Ctrl Space</kbd> (`-M isearch "^ "`)
+`abbr-expand-and-accept` | If following an abbreviation, expands it (with `abbr-expand`). Then accepts the line | <kbd>Enter</kbd> (`" "`)
+`abbr-expand-and-insert` | If following an abbreviation, expands it (with `abbr-expand`). Then appends the binding | <kbd>Space</kbd> (`"^ "`); in search mode, <kbd>Ctrl Space</kbd> (`-M isearch "^ "`)
 
 `abbr-expand-and-space` was deprecated in v5.4.0 and dropped in v6.0.0. Use `abbr-expand-and-insert` instead.
 
