@@ -6,7 +6,7 @@ const siteTitle = "zsh-abbr";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: title,
+  title: `${siteTitle} v6`,
   description: description,
   // https://vitepress.dev/reference/site-config#titletemplate
   titleTemplate: `:title :: ${siteTitle}`, // to change delimiter from default pipe to play nice with Fathom event id format. see also homepage frontmatter
