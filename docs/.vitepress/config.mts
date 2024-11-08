@@ -76,8 +76,7 @@ export default defineConfig({
       "meta",
       {
         property: "og:description",
-        content:
-          "The zsh manager for auto-expanding abbreviations, inspired by fish.",
+        content: description,
       },
     ],
     [
@@ -104,8 +103,7 @@ export default defineConfig({
       "meta",
       {
         name: "twitter:description",
-        content:
-          "The zsh manager for auto-expanding abbreviations, inspired by fish shell.",
+        content: description,
       },
     ],
     [
