@@ -270,6 +270,7 @@ export default defineConfig({
       },
       {
         text: "Reference",
+        collapsed: false,
         items: [
           {
             text: "Scopes",
@@ -315,6 +316,7 @@ export default defineConfig({
       },
       {
         text: "Contribute",
+        collapsed: false,
         items: [
           {
             text: "Contributing",
