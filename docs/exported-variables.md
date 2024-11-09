@@ -5,9 +5,13 @@ These docs are for the not-yet-released v6.
 For v5 docs visit <https://zsh-abbr.olets.dev>
 :::
 
+::: tip
+Scroll the table horizontally
+:::
+
 In addition to exporting the configuration variables above, zsh-abbr creates the following variables:
 
-Variable | Added In | Type | Value
+Variable | Added&nbsp;In | Type | Value
 ---|---|---|---
 `ABBR_GLOBAL_SESSION_ABBREVIATIONS` | <Badge type="info">4.0.0</Badge> | associative array | The global session abbreviations
 `ABBR_GLOBAL_USER_ABBREVIATIONS` | <Badge type="info">4.0.0</Badge> | associative array | The global user abbreviations
@@ -26,7 +30,11 @@ Each element in `ABBR_GLOBAL_SESSION_ABBREVIATIONS`, `ABBR_GLOBAL_USER_ABBREVIAT
 
 zsh-abbr exports the following variables in limited contexts:
 
-Variable | Added In | Type | Value
+::: tip
+Scroll the table horizontally
+:::
+
+Variable | Added&nbsp;In | Type | Value
 ---|---|---|---
 `ABBR_INITIALIZING` | <Badge type="info">4.0.0</Badge> | integer | Set to `1` when zsh-abbr is initializing, otherwise not set
 `ABBR_LOADING_USER_ABBREVIATIONS` | <Badge type="info">4.0.0</Badge> | integer | Set to `1` when the interactive shell is refreshing its list of user abbreviations, otherwise not set

@@ -5,7 +5,11 @@ These docs are for the not-yet-released v6.
 For v5 docs visit <https://zsh-abbr.olets.dev>
 :::
 
-Variable | Added In | Type | <div style="width: 300px">Use</div> | Default | Limitations
+::: tip
+Scroll the table horizontally
+:::
+
+Variable | Added&nbsp;In | Type | <div style="width: 300px">Use</div> | Default | Limitations
 ---|---|---|---|---|---
 `ABBR_AUTOLOAD` | <Badge type="info">3.3.2</Badge> | integer | If non-zero, automatically account for updates to the user abbreviations file (read [Storage and manual editing](#storage-and-manual-editing)) | 1
 `ABBR_DEBUG` | <Badge type="info">3.2.0</Badge> | integer | If non-zero, print debugging messages | 0
