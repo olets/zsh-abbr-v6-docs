@@ -226,27 +226,28 @@ export default defineConfig({
     sidebar: [
       {
         text: "Overview",
+        collapsed: false,
         items: [
           {
             text: "Introduction",
             link: "/",
           },
           {
-            text: "Essential commands",
-            link: "/usage",
+            text: "Installation",
+            link: "/installation",
           },
           {
             text: "What's new?",
             link: "/whats-new",
           },
           {
-            text: "Installation",
-            link: "/installation",
-          },
-          {
-            text: "Advanced",
+            text: "Features",
             collapsed: false,
             items: [
+              {
+                text: "Abbreviation expansion",
+                link: "/abbreviation-expansion",
+              },
               {
                 text: "Cursor placement",
                 link: "/cursor-placement",
@@ -263,16 +264,12 @@ export default defineConfig({
                 text: "Reminders",
                 link: "/reminders",
               },
-              {
-                text: "Integrations",
-                link: "/integrations",
-              },
             ],
           },
         ],
       },
       {
-        text: "Reference",
+        text: "Manual",
         collapsed: false,
         items: [
           {
@@ -288,34 +285,44 @@ export default defineConfig({
             link: "/commands",
           },
           {
-            text: "Configuration variables",
-            link: "/configuration-variables",
-          },
-          {
-            text: "Exported variables",
-            link: "/exported-variables",
-          },
-          {
-            text: "Storage and manual editing",
-            link: "/storage-and-manual-editing",
-          },
-          {
-            text: "Widgets and key bindings",
-            link: "/widgets-and-key-bindings",
+            text: "Advanced",
+            collapsed: false,
+            items: [
+              {
+                text: "Configuration variables",
+                link: "/configuration-variables",
+              },
+              {
+                text: "Exported variables",
+                link: "/exported-variables",
+              },
+              {
+                text: "Integrations",
+                link: "/integrations",
+              },
+              {
+                text: "Storage and manual editing",
+                link: "/storage-and-manual-editing",
+              },
+              {
+                text: "Widgets and key bindings",
+                link: "/widgets-and-key-bindings",
+              },
+              {
+                text: "Migrating between versions",
+                link: "/migrating-between-versions",
+              },
+              {
+                text: "Uninstalling",
+                link: "/uninstalling",
+              },
+              {
+                text: "Performance",
+                link: "/performance",
+              },
+            ],
           },
         ],
-      },
-      {
-        text: "Migrating between versions",
-        link: "/migrating-between-versions",
-      },
-      {
-        text: "Uninstalling",
-        link: "/uninstalling",
-      },
-      {
-        text: "Performance",
-        link: "/performance",
       },
       {
         text: "Contribute",
