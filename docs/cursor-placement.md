@@ -69,6 +69,10 @@ From here, typing `xyz`<kbd>Space</kbd> places the cursor again:
 
 - The "markers" don't have to be `%`. Customize the with `ABBR_EXPANSION_CURSOR_MARKER` and/or `ABBR_LINE_CURSOR_MARKER`. Learn more at [Configuration variables](./configuration-variables.md).
 
+    ::: tip
+    Consider changing the markers to something you'll never use in a command. For example an unusual Unicode character, or a long string like `%ABBR_CURSOR_MARKER%`.
+    :::
+
 - The trigger doesn't have to be <kbd>Space</kbd>. Learn more at [Widgets and key bindings](./widgets-and-key-bindings.md).
 
 - The _expansion_ cursor placement and _line_ cursor placement systems can use distinct "markers". One (`ABBR_LINE_CURSOR_MARKER`) is jumped to by the `abbr-expand-and-insert` widget[^1] _regardless_ of whether an abbreviation was expanded. The other (`ABBR_EXPANSION_CURSOR_MARKER`) is jumped to by the `abbr-expand` widget[^2] _when_ an abbreviation is expanded.
