@@ -65,6 +65,46 @@ When you do
 
 _two_ entries will be added to your shell history: first `e c` and then `e d`.
 
+::: danger Caution
+This feature supports `hist_ignore_space` (learn more in the [zsh History Options docs](https://zsh.sourceforge.io/Doc/Release/Options.html#History)) _to a degree_: it respects `hist_ignore_space` when set in a zsh config file but not when set interactively after the session is initialized.
+
+**Do this**
+
+```shell
+# .zshrc
+
+setopt hist_ignore_space
+ABBR_EXPAND_AND_ACCEPT_PUSH_ABBREVIATED_LINE_TO_HISTORY=1
+```
+
+&nbsp;
+
+```shell
+abbr a=b
+echo a[Enter] # `echo a` will saved to history (expected)
+ echo a[Enter] # `echo a` will not be saved to history (expected)
+```
+
+&nbsp;
+
+**Don't do this**
+
+```shell
+# .zshrc
+
+ABBR_EXPAND_AND_ACCEPT_PUSH_ABBREVIATED_LINE_TO_HISTORY=1
+```
+
+&nbsp;
+
+```shell
+abbr a=b
+setopt hist_ignore_space
+echo a[Enter] # `echo a` will saved to history (expected)
+ echo a[Enter] # ⚠️ `echo a` will be saved to history (unexpected) ⚠️
+```
+:::
+
 ## Do both
 
 The two can be combined. Given this configuration,
