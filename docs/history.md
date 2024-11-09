@@ -7,61 +7,65 @@ For v5 docs visit <https://zsh-abbr.olets.dev>
 
 You can configure zsh-abbr to save abbreviations to your shell history.
 
-::: tip
-Learn more at [Configuration variables](./configuration-variables.md).
-:::
-
 There are two levers in the history system:
 
-- `ABBR_EXPAND_PUSH_ABBREVIATION_TO_HISTORY` controls whether expanded abbreviations are added to shell history. Given this configuration,
+## Save abbreviations to history
 
-    ```shell
-    # .zshrc
+zsh-abbr can add expanded abbreviations to your shell history. Given this configuration [^1]
 
-    ABBR_EXPAND_PUSH_ABBREVIATION_TO_HISTORY=1
-    ```
+[^1]: Learn more at [Configuration variables](./configuration-variables.md).
 
-    and these abbreviations
+```shell
+# .zshrc
 
-    ```shell
-    % abbr a=b
-    % abbr -g c=d
-    ```
+ABBR_EXPAND_PUSH_ABBREVIATION_TO_HISTORY=1
+```
 
-    When you do any of
+and these abbreviations
 
-    ```shell
-    % a[Space]
-    % a[Enter]
-    % c[Space]
-    % c[Enter]
-    % e c[Space]
-    % e c[Enter]
-    ```
+```shell
+% abbr a=b
+% abbr -g c=d
+```
 
-    the abbreviation you expanded (`a` or `c`) will be added to your shell history.
+When you do any of
 
-- `ABBR_EXPAND_AND_ACCEPT_PUSH_ABBREVIATED_LINE_TO_HISTORY` controls whether, when you "run" an abbreviation in a line has content besides the abbreviation, the entire line with the abbreviation is added. expanded abbreviations are added to shell history. Given this configuration,
+```shell
+% a[Space]
+% a[Enter]
+% c[Space]
+% c[Enter]
+% e c[Space]
+% e c[Enter]
+```
 
-    ```shell
-    # .zshrc
+the abbreviation you expanded (`a` or `c`) will be added to your shell history.
 
-    ABBR_EXPAND_AND_ACCEPT_PUSH_ABBREVIATED_LINE_TO_HISTORY=1
-    ```
+## Save lines with abbreviations to history
 
-    and this abbreviation
+When you "run" an abbreviation in a line that has content besides the abbreviation, you can save the full line with the unexpected abbreviation to the shell history.
 
-    ```shell
-    % abbr -g c=d
-    ```
+```shell
+# .zshrc
 
-    When you do
+ABBR_EXPAND_AND_ACCEPT_PUSH_ABBREVIATED_LINE_TO_HISTORY=1
+```
 
-    ```shell
-    % e c[Enter]
-    ```
+and this abbreviation
 
-    _two_ entries will be added to your shell history: first `e c` and then `e d`.
+```shell
+% abbr -g c=d
+```
+
+When you do
+
+```shell
+% e c[Enter]
+```
+
+_two_ entries will be added to your shell history: first `e c` and then `e d`.
+
+## Do both
 
 The two can be combined. Given this configuration,
 
