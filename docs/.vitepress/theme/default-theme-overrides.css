@@ -100,6 +100,20 @@ and reformatted
   font-size: 1rem;
 }
 
+.VPDoc:has(.VPDocAsideOutline:not(.has-outline)) {
+  .aside {
+    display: none;
+  }
+
+  .content-container {
+    max-width: none;
+
+    .vp-doc>div>*:not(table) {
+      max-width: 688px;
+    }
+  }
+}
+
 .VPFlyout .VPMenu .label {
   font-size: inherit;
 }
