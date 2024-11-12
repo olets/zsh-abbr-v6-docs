@@ -1,10 +1,5 @@
 # Reminders
 
-:::danger
-These docs are for the not-yet-released v6.  
-For v5 docs visit <https://zsh-abbr.olets.dev>
-:::
-
 ## Basics
 
 Are you're forgetting to take advantage of the abbreviations you've added? Want to be reminded? Enable the reminders system and the reminders notifier:

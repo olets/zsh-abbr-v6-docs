@@ -1,10 +1,5 @@
 # History
 
-:::danger
-These docs are for the not-yet-released v6.  
-For v5 docs visit <https://zsh-abbr.olets.dev>
-:::
-
 You can configure zsh-abbr to save abbreviations to your shell history.
 
 There are two levers in the history system:

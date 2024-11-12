@@ -9,11 +9,6 @@ next:
 
 # Contributing
 
-:::danger
-These docs are for the not-yet-released v6.  
-For v5 docs visit <https://zsh-abbr.olets.dev>
-:::
-
 Thanks for your interest. Contributions are welcome!
 
 Both zsh-abbr and its documentation are released with a Contributor Code of Conduct. By participating in either project you agree to abide by its terms.

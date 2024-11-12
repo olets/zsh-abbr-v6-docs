@@ -4,11 +4,6 @@ titleTemplate: :title # see also VitePress config
 
 # zsh-abbr ![GitHub release (latest by date)](https://img.shields.io/github/v/release/olets/zsh-abbr?include_prereleases&label=pre-release) ![GitHub commits since latest release](https://img.shields.io/github/commits-since/olets/zsh-abbr/latest?include_prereleases)
 
-:::danger
-These docs are for the not-yet-released v6.  
-For v5 docs visit <https://zsh-abbr.olets.dev>
-:::
-
 ![splash card: the text '% abbr' as green neon lettering](/images/zsh-abbr.png)
 
 **zsh-abbr** is the zsh manager for **auto-expanding abbreviations** - text that when written in a terminal is replaced with other (typically longer) text. Inspired by fish shell.

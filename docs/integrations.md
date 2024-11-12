@@ -1,10 +1,5 @@
 # Integrations
 
-:::danger
-These docs are for the not-yet-released v6.  
-For v5 docs visit <https://zsh-abbr.olets.dev>
-:::
-
 :::warning
 These integrations are not regularly tested. It is possible that they are out of date. Pull requests are welcome to fix broken integrations. The zsh-abbr maintainer does not commit to keeping them working — if something breaks and the maintainer and the community does not have a fix, it may be removed from this documentation.
 :::

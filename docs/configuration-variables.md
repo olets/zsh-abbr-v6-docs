@@ -4,11 +4,6 @@ outline: false
 
 # Configuration variables
 
-:::danger
-These docs are for the not-yet-released v6.  
-For v5 docs visit <https://zsh-abbr.olets.dev>
-:::
-
 ::: tip
 Scroll the table horizontally
 :::

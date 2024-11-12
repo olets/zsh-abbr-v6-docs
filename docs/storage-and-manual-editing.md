@@ -1,10 +1,5 @@
 # Storage and manual editing
 
-:::danger
-These docs are for the not-yet-released v6.  
-For v5 docs visit <https://zsh-abbr.olets.dev>
-:::
-
 User abbreviations live in a plain text file which you can edit directly, share, keep in version control, etc.
 
 The path to the file is stored in the `ABBR_USER_ABBREVIATIONS_FILE` configuration variable. Read [Configuration variables](#configuration-variables) for details.

@@ -1,10 +1,5 @@
 # Widgets and key bindings
 
-:::danger
-These docs are for the not-yet-released v6.  
-For v5 docs visit <https://zsh-abbr.olets.dev>
-:::
-
 By default
 
 - <kbd>Space</kbd> expands abbreviations

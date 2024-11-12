@@ -1,10 +1,5 @@
 # Cursor placement
 
-:::danger
-These docs are for the not-yet-released v6.  
-For v5 docs visit <https://zsh-abbr.olets.dev>
-:::
-
 ## Place the cursor after expanding abbreviations
 
 Toggle the "expansion cursor placement" system on:

@@ -1,10 +1,5 @@
 # Prefixes
 
-:::danger
-These docs are for the not-yet-released v6.  
-For v5 docs visit <https://zsh-abbr.olets.dev>
-:::
-
 Out of the box, regular abbreviations ([Types > Regular](./types.md#regular)) expand only at the start of the command line.
 
 _Regular abbreviation prefixes_ are strings and globs that don't count against the "start of the line"-ness.

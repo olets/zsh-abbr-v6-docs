@@ -1,10 +1,5 @@
 # Migrating between versions
 
-:::danger
-These docs are for the not-yet-released v6.  
-For v5 docs visit <https://zsh-abbr.olets.dev>
-:::
-
 ## Upgrading from v5 to v6
 
 1. If you've set up something custom with [Widgets&nbsp;and&nbsp;key&nbsp;bindings](/widgets-and-key-bindings) make sure you've migrated off deprecated functions.
