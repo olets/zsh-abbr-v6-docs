@@ -7,9 +7,7 @@ For v5 docs visit <https://zsh-abbr.olets.dev>
 
 ## Basics
 
-Are you're forgetting to take advantage of the abbreviations you've added? Want reminders?
-
-Enable the reminders system and the reminders notifier:
+Are you're forgetting to take advantage of the abbreviations you've added? Want to be reminded? Enable the reminders system and the reminders notifier:
 
 ```shell
 # .zshrc
@@ -81,11 +79,16 @@ The reminders system sets several variables:
 - `ABBR_UNUSED_ABBREVIATION_SCOPE` is the scope of the abbreviation you could have used (learn more at [Scopes](./scopes.md))
 - `ABBR_UNUSED_ABBREVIATION_TYPE` is the type of the abbreviation you could have used (learn more at [Types](./types.md))
 
-Advanced users might choose to do something with these values. For example, with a `precmd` hook you could use them to customize your prompt. You might want to not enable the reminders notifier:
+Advanced users might choose to do something with these values. For example, you not enable the reminders notifier and instead use a `precmd` hook to customize your prompt:
 
 ```shell
 # .zshrc
 
 ABBR_GET_AVAILABLE_ABBREVIATION=1
 # leave ABBR_LOG_AVAILABLE_ABBREVIATION unset
+my_abbreviation_reminder() {
+  # …
+}
+autoload -U add-zsh-hook
+add-zsh-hook precmd my_abbreviation_reminder
 ```
