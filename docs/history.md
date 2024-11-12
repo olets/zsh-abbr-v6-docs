@@ -68,7 +68,7 @@ When you do
 _two_ entries will be added to your shell history: first `e c` and then `e d`.
 
 ::: danger Caution
-This feature supports `hist_ignore_space` (learn more in the [zsh History Options docs](https://zsh.sourceforge.io/Doc/Release/Options.html#History)) _to a degree_: it respects `hist_ignore_space` when set in a zsh config file but not when set interactively after the session is initialized.
+This feature supports `hist_ignore_space` (learn more in the [zsh History Options docs](https://zsh.sourceforge.io/Doc/Release/Options.html#History)) _to a degree_: it follows the value of `hist_ignore_space` when the session is initialized, but does not pick up on changes made interactively to the option.
 
 **Do this**
 
@@ -101,7 +101,7 @@ echo a[Enter] # `echo a` will saved to history (expected)
 ```
 :::
 
-## Do both
+## Save abbreviations _and_ lines with abbreviations to history
 
 The two can be combined. Given this configuration,
 
