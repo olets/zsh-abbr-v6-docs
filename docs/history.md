@@ -43,7 +43,7 @@ the abbreviation you expanded (`a` or `c`) will be added to your shell history.
 
 ## Save lines with abbreviations to history
 
-When you hit enter[^2] to expand an abbreviation and run the command line, an abbreviation in a line that has content besides the abbreviation, you can save the full line with the unexpected abbreviation to the shell history.
+When you hit enter[^2] to expand an abbreviation and run the command line, an abbreviation in a line that has content besides the abbreviation, you can save the full line with the unexpanded abbreviation to the shell history.
 
 [^2]: Learn more at [Widgets and key bindings](./widgets-and-key-bindings.md).
 
