@@ -79,7 +79,7 @@ The reminders system sets several variables:
 - `ABBR_UNUSED_ABBREVIATION_SCOPE` is the scope of the abbreviation you could have used (learn more at [Scopes](./scopes.md))
 - `ABBR_UNUSED_ABBREVIATION_TYPE` is the type of the abbreviation you could have used (learn more at [Types](./types.md))
 
-Advanced users might choose to do something with these values. For example, you not enable the reminders notifier and instead use a `precmd` hook to customize your prompt:
+Advanced users might choose to do something with these values. For example, you could not enable the reminders notifier and instead use a `precmd` hook to customize your prompt:
 
 ```shell
 # .zshrc
