@@ -2,7 +2,7 @@
 titleTemplate: :title # see also VitePress config
 ---
 
-# zsh-abbr ![GitHub release (latest by date)](https://img.shields.io/github/v/release/olets/zsh-abbr?include_prereleases&label=pre-release) ![GitHub commits since latest release](https://img.shields.io/github/commits-since/olets/zsh-abbr/latest?include_prereleases)
+# zsh-abbr ![GitHub release (latest by date)](https://img.shields.io/github/v/release/olets/zsh-abbr) ![GitHub commits since latest release](https://img.shields.io/github/commits-since/olets/zsh-abbr/latest)
 
 ![splash card: the text '% abbr' as green neon lettering](/images/zsh-abbr.png)
 
