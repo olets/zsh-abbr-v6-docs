@@ -69,6 +69,11 @@ and reformatted
   }
 }
 
+/* Adjacent codeblocks have a gap between them */
+.vp-doc div[class*='language-']+div[class*='language-'] {
+  margin-top: 0;
+}
+
 .vp-doc {
   p {
     line-height: inherit;
