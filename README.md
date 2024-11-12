@@ -10,8 +10,8 @@ Source for [zsh-abbr](https://github.com/olets/zsh-abbr/tree/v6)'s documentation
 
 ## Requirements
 
-- [asdf](https://asdf-vm.com/) and its Node.js plugin
-- [pnpm](https://pnpm.io/)
+- [asdf](https://asdf-vm.com/) and its [Node.js plugin](https://github.com/asdf-vm/asdf-nodejs)
+- [bun](https://bun.sh/)
 
 ## Development
 
@@ -32,13 +32,7 @@ and fill in values in `.env`.
 Then install dependencies by running
 
 ```shell
-pnpm
-```
-
-### Update Algolia index
-
-```shell
-pnpm search:index
+bun
 ```
 
 ### Update external content
@@ -46,13 +40,13 @@ pnpm search:index
 Some content is managed in the zsh-abbr repo. To update this repo's copy, run
 
 ```shell
-pnpm update-external-content
+bun update-external-content
 ```
 
 ### Serve and watch
 
 ```shell
-pnpm docs:dev
+bun run docs:dev
 ```
 
 ## Contributing
