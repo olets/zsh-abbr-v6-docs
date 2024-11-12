@@ -1,4 +1,4 @@
-## Exported variables
+# Exported variables
 
 :::danger
 These docs are for the not-yet-released v6.  
@@ -26,7 +26,7 @@ Variable | Added&nbsp;In | Type | Value
 
 Each element in `ABBR_GLOBAL_SESSION_ABBREVIATIONS`, `ABBR_GLOBAL_USER_ABBREVIATIONS`, `ABBR_REGULAR_SESSION_ABBREVIATIONS`, and `ABBR_REGULAR_USER_ABBREVIATIONS` has the form `ABBREVIATION=EXPANSION`. The expansion value is quoted. Scripters will probably want to remove one level of quotes, using the [Q modifier](http://zsh.sourceforge.net/Doc/Release/Expansion.html#Modifiers) (e.g. `for v in ${(Qv)ABBR_REGULAR_USER_ABBREVIATIONS}...`).
 
-### Transient exported variables
+## Transient exported variables
 
 zsh-abbr exports the following variables in limited contexts:
 
