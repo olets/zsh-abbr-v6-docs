@@ -60,7 +60,7 @@ exec zsh
 - Either download the archive of the release of your choice from <https://github.com/olets/zsh-abbr/releases> and expand it (ensures you have the latest official release)
 - or clone a single branch:
     ```shell
-    git clone https://github.com/olets/zsh-abbr --single-branch --branch <branch> --depth 1
+    git clone https://github.com/olets/zsh-abbr --recurse-submodules --single-branch --branch <branch> --depth 1
     ```
     Replace `<branch>` with a branch name. Good options are `main` (for the latest stable release), `next` (for the latest release, even if it isn't stable), or `v6` (for releases in this major version).
 
