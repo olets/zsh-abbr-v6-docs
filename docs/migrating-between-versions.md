@@ -2,6 +2,13 @@
 
 ## Upgrading from v5 to v6
 
+1. v6 includes a Git submodule. When cloning manually, add `--recurse-submodules`
+
+    ```
+    git clone https://github.com/olets/zsh-abbr --single-branch --branch <branch> --depth 1 // [!code --]
+    git clone https://github.com/olets/zsh-abbr --recurse-submodules --single-branch --branch <branch> --depth 1 // [!code ++]
+    ```
+
 1. If you've set up something custom with [Widgets&nbsp;and&nbsp;key&nbsp;bindings](/widgets-and-key-bindings) make sure you've migrated off deprecated functions.
 
     - Instead of `abbr-expand-and-space` use `abbr-expand-and-insert`
