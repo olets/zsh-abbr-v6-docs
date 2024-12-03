@@ -43,7 +43,15 @@ There may be others out there. If you know of another, please make a pull reques
 
 ## Plugin
 
-You can install zsh-abbr with a zsh plugin manager, including those built into frameworks such as Oh-My-Zsh (OMZ) and prezto. Each has their own way of doing things. Read your package manager's documentation or the [zsh plugin manager plugin installation procedures gist](https://gist.github.com/olets/06009589d7887617e061481e22cf5a4a); Fig users can install zsh-abbr from [its page in the Fig plugin directory](https://fig.io/plugins/other/zsh-abbr_olets)
+You can install zsh-abbr with a zsh plugin manager, including those built into frameworks such as Oh-My-Zsh (OMZ) and prezto. Each has their own way of doing things. Read your package manager's documentation or the [zsh plugin manager plugin installation procedures gist](https://gist.github.com/olets/06009589d7887617e061481e22cf5a4a); Fig users can install zsh-abbr from [its page in the Fig plugin directory](https://fig.io/plugins/other/zsh-abbr_olets).
+
+:::warning
+v6 is compatible with most but not all plugin managers in the [zsh plugin manager plugin installation procedures gist](https://gist.github.com/olets/06009589d7887617e061481e22cf5a4a).
+
+Antibody, Antigen, zplug, and zsh4humans may be incompatible (if you have a working solution for any of those, please suggest an edit to this page).
+
+If your plugin manager is not compatible, you can still install zsh-abbr [manually](#manual) or [with Homebrew](#homebrew).
+:::
 
 :::tip
 Want to stay on this major version until you _choose_ to upgrade to the next? Use your package manager's convention for specifying the branch `v6`.
@@ -57,11 +65,27 @@ exec zsh
 
 ## Manual
 
-- Either download the archive of the release of your choice from <https://github.com/olets/zsh-abbr/releases> and expand it (ensures you have the latest official release)
+:::warning Heads up
+Getting a warning "There was a problem finishing installing dependencies"? If you cloned the Git repo, make sure you initialized the plugin's submodules. A simple solution is to pass `--recurse-submodules` when `git clone`ing.
+:::
+
+- Either download the archive of the release of your choice from <https://github.com/olets/zsh-abbr/releases> and expand it (ensures you have the latest official release). Follow the release notes: you want the file at
+
+    ```
+    https://github.com/olets/zsh-abbr/releases/download/<version>/<version>.tar.gz
+    ```
+
+    *not* one of the ones at
+
+    ```
+    https://github.com/olets/zsh-abbr/archive/refs/tags/<version>.<extension>
+    ```
 - or clone a single branch:
+
     ```shell
     git clone https://github.com/olets/zsh-abbr --recurse-submodules --single-branch --branch <branch> --depth 1
     ```
+
     Replace `<branch>` with a branch name. Good options are `main` (for the latest stable release), `next` (for the latest release, even if it isn't stable), or `v6` (for releases in this major version).
 
 Then add `source path/to/zsh-abbr.zsh` to your `.zshrc` (replace `path/to/` with the real path), and restart zsh:
