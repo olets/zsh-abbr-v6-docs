@@ -93,3 +93,13 @@ Then add `source path/to/zsh-abbr.zsh` to your `.zshrc` (replace `path/to/` with
 ```shell
 exec zsh
 ```
+
+### Updating
+
+If you downloaded an archive, download the latest and update your `.zshrc` if necessary.
+
+If you cloned the repo, `cd` into the clone and run
+
+```shell
+git pull --recurse-submodules --depth 1
+```
