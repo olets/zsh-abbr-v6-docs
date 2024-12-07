@@ -70,7 +70,7 @@ v6 is compatible with most but not all plugin managers in the [zsh plugin manage
 
 - **zr**: consider upvoting [the open issue](https://github.com/jedahan/zr/issues/43) which would probably unlock support.
 
-- **zsh4human**: refer to the [zsh4human integration](./integrations.md#zsh4humans).
+- **zsh4humans**: refer to the [zsh4humans integration](./integrations.md#zsh4humans).
 
 </details>
 :::
