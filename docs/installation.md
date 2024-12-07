@@ -48,7 +48,7 @@ You can install zsh-abbr with a zsh plugin manager, including those built into f
 :::warning
 v6 is compatible with most but not all plugin managers in the [zsh plugin manager plugin installation procedures gist](https://gist.github.com/olets/06009589d7887617e061481e22cf5a4a). If your plugin manager is not compatible, you can still install zsh-abbr [manually](#manual) or [with Homebrew](#homebrew).
 
-<details><summary class="font-medium text-[--vp-c-warning-1] underline">Click to show details for various package managers.</summary>
+<details><summary class="font-medium text-[--vp-c-warning-1] underline">Click to show/hide details for various package managers.</summary>
 
 - **Antigen**: may be incompatible (if you have a working solution, please suggest an edit).
 
