@@ -3,7 +3,7 @@ import plugin from "tailwindcss/plugin";
 
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./docs/**/*.md", "./docs/.vitepress/theme/*.{ts,vue}"],
+  content: ["./docs/**/*.md", "./docs/.vitepress/theme/**/*.{ts,vue}"],
   plugins: [
     fluidFontSizePlugin,
     plugin(function ({ addBase }) {

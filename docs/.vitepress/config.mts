@@ -177,6 +177,8 @@ export default defineConfig({
       pattern: "https://github.com/olets/zsh-abbr-v6-docs/edit/main/docs/:path",
     },
 
+    footer: /* see Footer.vue */ undefined,
+
     // logo: {
     //   alt: "tailwindcss-fluid-font-size Logo",
     //   src: "/icon.svg",
