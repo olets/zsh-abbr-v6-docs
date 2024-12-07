@@ -8,6 +8,10 @@ kbd {
   }
 }
 
+summary {
+  cursor: pointer;
+}
+
 /*
 External links
 

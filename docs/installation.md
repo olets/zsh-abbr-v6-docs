@@ -80,6 +80,33 @@ Getting a warning "There was a problem finishing installing dependencies"? If yo
     ```
     https://github.com/olets/zsh-abbr/archive/refs/tags/<version>.<extension>
     ```
+
+  :::tip Want to automate downloading an archive?
+  Advanced users can script downloading the latest release's tarball without depending on Git.
+  
+  <details>
+  <summary class="underline">Click to display details.</summary>
+
+  One way is to use the GitHub REST API to find the latest release's associated tag, and then download the associated release's same-named asset. Learn more in GitHub's ["Get the latest release" REST API docs](https://docs.github.com/en/rest/releases/releases?apiVersion=2022-11-28#get-the-latest-release).
+
+  ```json
+  // JSON response
+
+  {
+    // ...
+    "tag_name": // …
+    // ...
+  }
+  ```
+
+  The URL pattern for the correct tarball to download is:
+
+  ```
+  https://github.com/olets/zsh-abbr/releases/download/<latest release's tag name>/<latest release's tag name>.tar.gz
+  ```
+  </details>
+  :::
+
 - or clone a single branch:
 
     ```shell
