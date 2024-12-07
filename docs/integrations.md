@@ -8,6 +8,8 @@ These integrations are not regularly tested. It is possible that they are out of
 
 ### fast-syntax-highlighting
 
+> _By [Teppei Shimaji](https://github.com/shimajiteppei)._
+
 To highlight user abbreviations that will expand, [fast-syntax-highlighting](https://github.com/zdharma-continuum/fast-syntax-highlighting) users can add these lines to `.zshrc` *below* where zsh-abbr and all abbreviations are loaded.
 
 > Known limitations:
@@ -54,6 +56,8 @@ fi
 ```
 
 ### zsh-syntax-highlighting
+
+> _By [Ihor Urazov](https://github.com/z0rc) and Henry Bley-Vroman._
 
 To highlight user abbreviations that will expand, [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting) users can add these lines to `.zshrc` *below* where zsh-abbr is loaded. For more info read the [zsh-syntax-highlighting regexp highlighter documentation](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/docs/highlighters/regexp.md).
 
@@ -111,6 +115,8 @@ bindkey -v
 ```
 
 ## macOS System Text Substitutions
+
+> _By [Morten Scheel](https://github.com/mortenscheel) and Henry Bley-Vroman._
 
 Run following snippet in your terminal to create regular user abbreviations for all your macOS text substitutions (to create session and/or global abbreviations, modify the `abbr add` line).
 
