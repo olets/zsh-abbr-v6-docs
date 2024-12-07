@@ -4,6 +4,55 @@
 These integrations are not regularly tested. It is possible that they are out of date. Pull requests are welcome to fix broken integrations. The zsh-abbr maintainer does not commit to keeping them working — if something breaks and the maintainer and the community does not have a fix, it may be removed from this documentation.
 :::
 
+## Plugin managers
+
+### zsh4humans
+
+Out of the box, [zsh4humans](https://github.com/romkatv/zsh4humans) plugin management feature `z4h install` does not support zsh-abbr.
+
+One solution is to use a different installation method. Read [Installation](./installation.md) for possibilities.
+
+Another is to extend `z4h install` with a postinstall hook following the following pattern.
+
+```shell
+# .zshrc
+
+z4h-postinstall:reinstall() {
+  # If called via `zstyle :z4h:<package> postinstall`,
+  # will have access to
+  # - $Z4H_PACKAGE_DIR, the location of the installed package
+  # - $Z4H_PACKAGE_NAME, the package argument passed to `z4h install`
+
+  # 1. Delete the `z4h install`-downloaded copy of $Z4H_PACKAGE_NAME
+  rm -rf $Z4H_PACKAGE_DIR
+
+  # 2. Download a different copy of $Z4H_PACKAGE_NAME to $Z4H_PACKAGE_DIR
+  # TODO
+}
+
+z4h install <package> || return
+zstyle :z4h:<package> postinstall z4h-postinstall:reinstall
+```
+
+If you can and are willing to use Git in the hook, try this:
+
+```shell
+# .zshrc
+
+function z4h-postinstall:replace-with-github-clone() {
+  [[ -n $Z4H_PACKAGE_DIR && -n $Z4H_PACKAGE_NAME ]] && 'command' -v git 1>/dev/null || return 1
+
+  'command' 'rm' -rf $Z4H_PACKAGE_DIR
+
+  'command' 'git' clone --recurse-submodules --single-branch --depth 1 https://github.com/$Z4H_PACKAGE_NAME $Z4H_PACKAGE_DIR
+}
+
+z4h install olets/zsh-abbr || return
+zstyle :z4h:olets/zsh-abbr postinstall z4h-postinstall:replace-with-github-clone || return
+```
+
+Otherwise, if you can't or don't want to use Git in the hook, read [Installation&nbsp;>&nbsp;Manual](./installation.md#manual)'s note on GitHub's REST API. You indentify the latest release's associated tag, use that to determine the archive URL to download, and then extract the archive into `Z4H_PACKAGE_DIR`. (Contributions of a clean solution are welcome.)
+
 ## Syntax highlighting
 
 ### fast-syntax-highlighting

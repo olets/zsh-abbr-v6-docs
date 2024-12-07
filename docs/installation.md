@@ -48,7 +48,9 @@ You can install zsh-abbr with a zsh plugin manager, including those built into f
 :::warning
 v6 is compatible with most but not all plugin managers in the [zsh plugin manager plugin installation procedures gist](https://gist.github.com/olets/06009589d7887617e061481e22cf5a4a).
 
-Antibody, Antigen, zplug, and zsh4humans may be incompatible (if you have a working solution for any of those, please suggest an edit to this page).
+zsh4human users: refer to the [zsh4human integration](./integrations.md#zsh4humans).
+
+Antibody, Antigen, and zplug may be incompatible (if you have a working solution for any of those, please suggest an edit to the [Integrations](./integrations.md) page).
 
 If your plugin manager is not compatible, you can still install zsh-abbr [manually](#manual) or [with Homebrew](#homebrew).
 :::
