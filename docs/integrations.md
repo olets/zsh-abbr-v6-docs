@@ -12,7 +12,26 @@ Out of the box, `z4h install` —the [zsh4humans](https://github.com/romkatv/zsh
 
 One solution is to use a different installation method. Read [Installation](./installation.md) for possibilities.
 
-Another is to extend `z4h install` with a postinstall hook with the following pattern:
+Another is to extend `z4h install` with a postinstall hook.
+
+If you can and are willing to use Git in the hook, try this:
+
+```shell
+# .zshrc
+
+function z4h-postinstall:replace-with-github-clone() {
+  [[ -n $Z4H_PACKAGE_DIR && -n $Z4H_PACKAGE_NAME ]] && 'command' -v git 1>/dev/null || return 1
+
+  'command' 'rm' -rf $Z4H_PACKAGE_DIR
+
+  'command' 'git' clone --recurse-submodules --single-branch --depth 1 https://github.com/$Z4H_PACKAGE_NAME $Z4H_PACKAGE_DIR
+}
+
+z4h install olets/zsh-abbr || return
+zstyle :z4h:olets/zsh-abbr postinstall z4h-postinstall:replace-with-github-clone || return
+```
+
+Otherwise, read [Installation&nbsp;>&nbsp;Manual](./installation.md#manual)'s note on GitHub's REST API. You'll indentify the latest release's associated tag, use that to determine the archive URL to download, and then extract the archive into `Z4H_PACKAGE_DIR`. The following pattern is recommended. (Contributions of a clean solution are welcome.)
 
 ```shell
 # .zshrc
@@ -33,25 +52,6 @@ z4h-postinstall:reinstall() {
 z4h install <package> || return
 zstyle :z4h:<package> postinstall z4h-postinstall:reinstall
 ```
-
-If you can and are willing to use Git in the hook, try this:
-
-```shell
-# .zshrc
-
-function z4h-postinstall:replace-with-github-clone() {
-  [[ -n $Z4H_PACKAGE_DIR && -n $Z4H_PACKAGE_NAME ]] && 'command' -v git 1>/dev/null || return 1
-
-  'command' 'rm' -rf $Z4H_PACKAGE_DIR
-
-  'command' 'git' clone --recurse-submodules --single-branch --depth 1 https://github.com/$Z4H_PACKAGE_NAME $Z4H_PACKAGE_DIR
-}
-
-z4h install olets/zsh-abbr || return
-zstyle :z4h:olets/zsh-abbr postinstall z4h-postinstall:replace-with-github-clone || return
-```
-
-Otherwise, read [Installation&nbsp;>&nbsp;Manual](./installation.md#manual)'s note on GitHub's REST API. You indentify the latest release's associated tag, use that to determine the archive URL to download, and then extract the archive into `Z4H_PACKAGE_DIR`. (Contributions of a clean solution are welcome.)
 
 ## Syntax highlighting
 
