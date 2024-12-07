@@ -8,11 +8,11 @@ These integrations are not regularly tested. It is possible that they are out of
 
 ### zsh4humans
 
-Out of the box, [zsh4humans](https://github.com/romkatv/zsh4humans) plugin management feature `z4h install` does not support zsh-abbr.
+Out of the box, `z4h install` —the [zsh4humans](https://github.com/romkatv/zsh4humans) plugin management feature— does not support zsh-abbr.
 
 One solution is to use a different installation method. Read [Installation](./installation.md) for possibilities.
 
-Another is to extend `z4h install` with a postinstall hook following the following pattern.
+Another is to extend `z4h install` with a postinstall hook with the following pattern:
 
 ```shell
 # .zshrc
@@ -51,7 +51,7 @@ z4h install olets/zsh-abbr || return
 zstyle :z4h:olets/zsh-abbr postinstall z4h-postinstall:replace-with-github-clone || return
 ```
 
-Otherwise, if you can't or don't want to use Git in the hook, read [Installation&nbsp;>&nbsp;Manual](./installation.md#manual)'s note on GitHub's REST API. You indentify the latest release's associated tag, use that to determine the archive URL to download, and then extract the archive into `Z4H_PACKAGE_DIR`. (Contributions of a clean solution are welcome.)
+Otherwise, read [Installation&nbsp;>&nbsp;Manual](./installation.md#manual)'s note on GitHub's REST API. You indentify the latest release's associated tag, use that to determine the archive URL to download, and then extract the archive into `Z4H_PACKAGE_DIR`. (Contributions of a clean solution are welcome.)
 
 ## Syntax highlighting
 
