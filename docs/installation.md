@@ -46,13 +46,30 @@ There may be others out there. If you know of another, please make a pull reques
 You can install zsh-abbr with a zsh plugin manager, including those built into frameworks such as Oh-My-Zsh (OMZ) and prezto. Each has their own way of doing things. Read your package manager's documentation or the [zsh plugin manager plugin installation procedures gist](https://gist.github.com/olets/06009589d7887617e061481e22cf5a4a); Fig users can install zsh-abbr from [its page in the Fig plugin directory](https://fig.io/plugins/other/zsh-abbr_olets).
 
 :::warning
-v6 is compatible with most but not all plugin managers in the [zsh plugin manager plugin installation procedures gist](https://gist.github.com/olets/06009589d7887617e061481e22cf5a4a).
+v6 is compatible with most but not all plugin managers in the [zsh plugin manager plugin installation procedures gist](https://gist.github.com/olets/06009589d7887617e061481e22cf5a4a). If your plugin manager is not compatible, you can still install zsh-abbr [manually](#manual) or [with Homebrew](#homebrew).
 
-zsh4human users: refer to the [zsh4human integration](./integrations.md#zsh4humans).
 
-Antibody, Antigen, and zplug may be incompatible (if you have a working solution for any of those, please suggest an edit to the [Integrations](./integrations.md) page).
+- **Antigen**: may be incompatible (if you have a working solution, please suggest an edit).
 
-If your plugin manager is not compatible, you can still install zsh-abbr [manually](#manual) or [with Homebrew](#homebrew).
+- **zgem**: consider upvoting the [open issue](https://github.com/qoomon/zgem/issues/2) and [open PR](https://github.com/qoomon/zgem/pull/3) which would unlock support.
+
+- **zgen**: specify the `main` branch:
+
+    ```shell
+    zgen load olets/zsh-abbr . main
+    ```
+
+- **zit**: specify the `main` branch:
+
+    ```shell
+    zit-install "https://github.com/olets/zsh-abbr#main" ".zsh-abbr"
+    ```
+
+- **zplug** may be incompatible (if you have a working solution, please suggest an edit).
+
+- **zr**: consider upvoting [the open issue](https://github.com/jedahan/zr/issues/43) which would probably unlock support.
+
+- **zsh4human**: refer to the [zsh4human integration](./integrations.md#zsh4humans).
 :::
 
 :::tip
