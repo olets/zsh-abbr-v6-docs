@@ -68,7 +68,23 @@ v6 is compatible with most but not all plugin managers in the [zsh plugin manage
 
 - **zplug** may be incompatible (if you have a working solution, please suggest an edit).
 
-- **zr**: consider upvoting [the open issue](https://github.com/jedahan/zr/issues/43) which would probably unlock support.
+- **zr**: 🆕 compatible as of zr v1.2.0 (December 10, 2024).
+
+    - If you haven't added zsh-abbr to your zr plugins yet, update zr first:
+    
+        ```shell
+        cargo install zr
+        ```
+
+        and then update your `.zshrc`.
+        
+    - If you've already added zsh-abbr to your zr plugins in your `.zshrc` and a "problem installing dependencies" message was logged to your terminal: update zr, then delete zr's cached copy of zsh-abbr, and finally restart the shell to have zr install a fresh copy of zsh-abbr.
+    
+        ```shell
+        cargo install zr
+        rm -rf $ABBR_SOURCE_PATH
+        exec zsh
+        ```
 
 - **zsh4humans**: refer to the [zsh4humans integration](./integrations.md#zsh4humans).
 
