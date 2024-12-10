@@ -48,7 +48,7 @@ You can install zsh-abbr with a zsh plugin manager, including those built into f
 :::warning
 v6 is compatible with most but not all plugin managers in the [zsh plugin manager plugin installation procedures gist](https://gist.github.com/olets/06009589d7887617e061481e22cf5a4a). If your plugin manager is not compatible, you can still install zsh-abbr [manually](#manual) or [with Homebrew](#homebrew).
 
-<details><summary class="font-medium text-[--vp-c-warning-1] underline">Click to show/hide details for various package managers.</summary>
+<details><summary>Click to show/hide details for various package managers.</summary>
 
 - **Antigen**: may be incompatible (if you have a working solution, please suggest an edit).
 
@@ -107,7 +107,7 @@ Getting a warning "There was a problem finishing installing dependencies"? If yo
   Advanced users can script downloading the latest release's tarball without depending on Git.
   
   <details>
-  <summary class="underline">Click to display details.</summary>
+  <summary>Click to display details.</summary>
 
   One way is to use the GitHub REST API to find the latest release's associated tag, and then download the associated release's same-named asset. Learn more in GitHub's ["Get the latest release" REST API docs](https://docs.github.com/en/rest/releases/releases?apiVersion=2022-11-28#get-the-latest-release).
 
