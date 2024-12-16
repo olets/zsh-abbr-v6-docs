@@ -62,7 +62,7 @@ zstyle :z4h:<package> postinstall z4h-postinstall:reinstall
 To highlight user abbreviations that will expand, [fast-syntax-highlighting](https://github.com/zdharma-continuum/fast-syntax-highlighting) users can add these lines to `.zshrc` *below* where zsh-abbr and all abbreviations are loaded.
 
 > Known limitations:
-> 1. the following fast-syntax-highlighting solution only supports single-word abbreviations. 🌟 Want highlighting for multi-word abbreviations? Read [zsh-abbr#24](https://github.com/olets/zsh-abbr/issues/24).
+> 1. the following fast-syntax-highlighting solution only supports single-word abbreviations. 🌟 Want highlighting for multi-word abbreviations? Read [zsh-abbr#120](https://github.com/olets/zsh-abbr/issues/120).
 > 1. Only and all of the abbreviations defined when the shell was started will be highlighted. fast-syntax-highlighting won't know about any abbreviation additions, erasures, or renames. To update fast-syntax-highlighting, open a new terminal, or restart the shell by running `exec zsh`.
 
 ```shell
