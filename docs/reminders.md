@@ -2,7 +2,7 @@
 
 ## Basics
 
-Are you're forgetting to take advantage of the abbreviations you've added? Want to be reminded? Enable the reminders system and the reminders notifier:
+Think you're forgetting to take advantage of the abbreviations you've added? Want to be reminded? Enable the reminders system and the reminders notifier:
 
 ```shell
 # .zshrc
