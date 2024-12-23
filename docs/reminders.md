@@ -33,8 +33,7 @@ If you prefer to have it print after the command output, toggle on `ABBR_LOG_AVA
 ```shell
 # .zshrc
 
-ABBR_GET_AVAILABLE_ABBREVIATION=1
-ABBR_LOG_AVAILABLE_ABBREVIATION=1
+# …
 ABBR_LOG_AVAILABLE_ABBREVIATION_AFTER=1
 ```
 
@@ -80,10 +79,15 @@ Advanced users might choose to do something with these values. For example, you 
 # .zshrc
 
 ABBR_GET_AVAILABLE_ABBREVIATION=1
-# leave ABBR_LOG_AVAILABLE_ABBREVIATION unset
+
+# leave ABBR_LOG_AVAILABLE_ABBREVIATION unset,
+# or do `ABBR_LOG_AVAILABLE_ABBREVIATION=0`
+
 my_abbreviation_reminder() {
   # …
 }
+
 autoload -U add-zsh-hook
+
 add-zsh-hook precmd my_abbreviation_reminder
 ```
