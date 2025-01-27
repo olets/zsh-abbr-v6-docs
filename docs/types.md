@@ -1,6 +1,6 @@
 # Types
 
-Some zsh-abbr commands take a **type** parameter. There are two supported scopes: **regular** and **global**. Regular abbreviations expand only at the start of the command line. Global abbreviations expand anywhere in the command line.
+Some zsh-abbr commands take a **type** parameter. There are two supported types: **regular** and **global**. Regular abbreviations expand only at the start of the command line. Global abbreviations expand anywhere in the command line.
 
 Regular is the default type.
 
@@ -57,7 +57,6 @@ Global abbreviations expand everywhere.
 To scope a zsh-abbr command to the user, pass the `--global` flag or its shorthand `-g`.
 
 In the following examples, global abbreviations expand at the start of the line and also in other positions:
-
 
 ```shell
 % abbr -g hw="echo hello world"
