@@ -179,10 +179,10 @@ export default defineConfig({
 
     footer: /* see Footer.vue */ undefined,
 
-    // logo: {
-    //   alt: "tailwindcss-fluid-font-size Logo",
-    //   src: "/icon.svg",
-    // },
+    logo: {
+      alt: "zsh-abbr Logo",
+      src: "/android-chrome-144x144.png",
+    },
 
     nav: [
       {
