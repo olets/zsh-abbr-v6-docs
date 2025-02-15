@@ -59,9 +59,10 @@ zstyle :z4h:<package> postinstall z4h-postinstall:reinstall
 
 > _By [Teppei Shimaji](https://github.com/shimajiteppei)._
 
-To highlight user abbreviations that will expand, [fast-syntax-highlighting](https://github.com/zdharma-continuum/fast-syntax-highlighting) users can add these lines to `.zshrc` *below* where zsh-abbr and all abbreviations are loaded.
+To highlight user abbreviations that will expand, [fast-syntax-highlighting](https://github.com/zdharma-continuum/fast-syntax-highlighting) users can add these lines to `.zshrc` _below_ where zsh-abbr and all abbreviations are loaded.
 
 > Known limitations:
+>
 > 1. the following fast-syntax-highlighting solution only supports single-word abbreviations. 🌟 Want highlighting for multi-word abbreviations? Read [zsh-abbr#120](https://github.com/olets/zsh-abbr/issues/120).
 > 1. Only and all of the abbreviations defined when the shell was started will be highlighted. fast-syntax-highlighting won't know about any abbreviation additions, erasures, or renames. To update fast-syntax-highlighting, open a new terminal, or restart the shell by running `exec zsh`.
 
@@ -108,11 +109,12 @@ fi
 
 > _By [Ihor Urazov](https://github.com/z0rc) and Henry Bley-Vroman._
 
-To highlight user abbreviations that will expand, [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting) users can add these lines to `.zshrc` *below* where zsh-abbr is loaded. For more info read the [zsh-syntax-highlighting regexp highlighter documentation](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/docs/highlighters/regexp.md).
+To highlight user abbreviations that will expand, [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting) users can add these lines to `.zshrc` _below_ where zsh-abbr is loaded. For more info read the [zsh-syntax-highlighting regexp highlighter documentation](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/docs/highlighters/regexp.md).
 
 Replace `<styles for …>` with a [zsh character highlighting](http://zsh.sourceforge.net/Doc/Release/Zsh-Line-Editor.html#Character-Highlighting) string (start at "The available types of highlighting are the following."). For example `fg=blue`, `fg=blue,bg=red,bold`, etc.
 
 > Known limitations:
+>
 > 1. The following zsh-syntax-highlighting solutions do not support unmatched parentheses within abbreviations. For example the valid `abbr '('='(x'` will make zsh-syntax-highlighting error. 🌟 Have a better solution? Please [contribute it](/contributing.html)!
 > 1. Only and all of the abbreviations defined when the shell was started will be highlighted. zsh-syntax-highlighting won't know about any abbreviation additions, erasures, or renames. To update zsh-syntax-highlighting, open a new terminal, or restart the shell by running `exec zsh`.
 
@@ -154,7 +156,7 @@ exec zsh
 
 ## vi mode
 
-Switching to vi mode —with `bindkey -v` or software which calls `bindkey -v` — will wipe out the keybindings zsh-abbr's interactive behavior relies on. If you use vi mode, enable it before initializing zsh-abbr. 
+Switching to vi mode —with `bindkey -v` or software which calls `bindkey -v` — will wipe out the keybindings zsh-abbr's interactive behavior relies on. If you use vi mode, enable it before initializing zsh-abbr.
 
 ```shell
 # .zshrc
