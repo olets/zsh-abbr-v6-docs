@@ -29,6 +29,7 @@ function z4h-postinstall:replace-with-github-clone() {
 
 z4h install olets/zsh-abbr || return
 zstyle :z4h:olets/zsh-abbr postinstall z4h-postinstall:replace-with-github-clone || return
+z4h load olets/zsh-abbr
 ```
 
 Otherwise, read [Installation&nbsp;>&nbsp;Manual](./installation.md#manual)'s note on GitHub's REST API. You'll indentify the latest release's associated tag, use that to determine the archive URL to download, and then extract the archive into `Z4H_PACKAGE_DIR`. The following pattern is recommended. (Contributions of a clean solution are welcome.)
@@ -49,8 +50,9 @@ z4h-postinstall:reinstall() {
   # TODO
 }
 
-z4h install <package> || return
+z4h install olets/zsh-abbr || return
 zstyle :z4h:<package> postinstall z4h-postinstall:reinstall
+z4h load olets/zsh-abbr
 ```
 
 ## Syntax highlighting
