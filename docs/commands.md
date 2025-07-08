@@ -267,6 +267,10 @@ Show the manpage.
 
 ## `import-aliases`
 
+:::warning Known limitation
+Aliases containing escaped characters may import incorrectly. If this happens, delete the abbreviation and use `abbr add` to manually create it correctly. Tracked in [issue #182](https://github.com/olets/zsh-abbr/issues/182).
+:::
+
 ```shell
 abbr import-aliases [<TYPE>] [--dry-run] [(--quiet | --quieter)] [(-f | --force)] 
 ```
