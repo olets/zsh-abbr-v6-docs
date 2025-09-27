@@ -59,53 +59,63 @@ z4h load olets/zsh-abbr
 
 ### fast-syntax-highlighting
 
-> _By [Teppei Shimaji](https://github.com/shimajiteppei)._
+[fast-syntax-highlighting](https://github.com/zdharma-continuum/fast-syntax-highlighting) users have a couple options.
 
-To highlight user abbreviations that will expand, [fast-syntax-highlighting](https://github.com/zdharma-continuum/fast-syntax-highlighting) users can add these lines to `.zshrc` _below_ where zsh-abbr and all abbreviations are loaded.
+🌟 For ongoing discussion about highlighting multi-word abbreviations with fast-syntax-highlighting, read [zsh-abbr#120](https://github.com/olets/zsh-abbr/issues/120).
 
-> Known limitations:
->
-> 1. the following fast-syntax-highlighting solution only supports single-word abbreviations. 🌟 Want highlighting for multi-word abbreviations? Read [zsh-abbr#120](https://github.com/olets/zsh-abbr/issues/120).
-> 1. Only and all of the abbreviations defined when the shell was started will be highlighted. fast-syntax-highlighting won't know about any abbreviation additions, erasures, or renames. To update fast-syntax-highlighting, open a new terminal, or restart the shell by running `exec zsh`.
+- [Zoe Wick](https://github.com/5A6F65)'s solution: [fast-abbr-highlighting[(https://github.com/5A6F65/fast-abbr-highlighting)
 
-```shell
-# .zshrc
+    - supports multi-word abbreviations
+    - configurable
+    - has the beginnings of support for prefixes
 
-# load zsh-abbr, then
+- [Teppei Shimaji](https://github.com/shimajiteppei)'s solution
 
-chroma_single_word() {
-  (( next_word = 2 | 8192 ))
+    Add these lines to `.zshrc` _below_ where zsh-abbr and all abbreviations are loaded.
 
-  local __first_call="$1" __wrd="$2" __start_pos="$3" __end_pos="$4"
-  local __style
+    > Known limitations:
+    >
+    > 1. Only supports single-word abbreviations
+    > 1. Only and all of the abbreviations defined when the shell was started will be highlighted. fast-syntax-highlighting won't know about any abbreviation additions, erasures, or renames. To update fast-syntax-highlighting, open a new terminal, or restart the shell by running `exec zsh`.
 
-  (( __first_call )) && { __style=${FAST_THEME_NAME}alias }
-  [[ -n "$__style" ]] && (( __start=__start_pos-${#PREBUFFER}, __end=__end_pos-${#PREBUFFER}, __start >= 0 )) && reply+=("$__start $__end ${FAST_HIGHLIGHT_STYLES[$__style]}")
-
-  (( this_word = next_word ))
-  _start_pos=$_end_pos
-
-  return 0
-}
-
-register_single_word_chroma() {
-  local word=$1
-  if [[ -x $(command -v $word) ]] || [[ -n $FAST_HIGHLIGHT["chroma-$word"] ]]; then
-    return 1
-  fi
-
-  FAST_HIGHLIGHT+=( "chroma-$word" chroma_single_word )
-  return 0
-}
-
-if [[ -n $FAST_HIGHLIGHT ]]; then
-  for abbr in ${(f)"$(abbr list-abbreviations)"}; do
-    if [[ $abbr != *' '* ]]; then
-      register_single_word_chroma ${(Q)abbr}
+    ```shell
+    # .zshrc
+    
+    # load zsh-abbr, then
+    
+    chroma_single_word() {
+      (( next_word = 2 | 8192 ))
+    
+      local __first_call="$1" __wrd="$2" __start_pos="$3" __end_pos="$4"
+      local __style
+    
+      (( __first_call )) && { __style=${FAST_THEME_NAME}alias }
+      [[ -n "$__style" ]] && (( __start=__start_pos-${#PREBUFFER}, __end=__end_pos-${#PREBUFFER}, __start >= 0 )) && reply+=("$__start $__end ${FAST_HIGHLIGHT_STYLES[$__style]}")
+    
+      (( this_word = next_word ))
+      _start_pos=$_end_pos
+    
+      return 0
+    }
+    
+    register_single_word_chroma() {
+      local word=$1
+      if [[ -x $(command -v $word) ]] || [[ -n $FAST_HIGHLIGHT["chroma-$word"] ]]; then
+        return 1
+      fi
+    
+      FAST_HIGHLIGHT+=( "chroma-$word" chroma_single_word )
+      return 0
+    }
+    
+    if [[ -n $FAST_HIGHLIGHT ]]; then
+      for abbr in ${(f)"$(abbr list-abbreviations)"}; do
+        if [[ $abbr != *' '* ]]; then
+          register_single_word_chroma ${(Q)abbr}
+        fi
+      done
     fi
-  done
-fi
-```
+    ```
 
 ### zsh-syntax-highlighting
 
