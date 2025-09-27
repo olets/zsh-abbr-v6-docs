@@ -63,7 +63,7 @@ z4h load olets/zsh-abbr
 
 🌟 For ongoing discussion about highlighting multi-word abbreviations with fast-syntax-highlighting, read [zsh-abbr#120](https://github.com/olets/zsh-abbr/issues/120).
 
-- [Zoe Wick](https://github.com/5A6F65)'s solution: [fast-abbr-highlighting[(https://github.com/5A6F65/fast-abbr-highlighting)
+- [Zoe Wick](https://github.com/5A6F65)'s solution: [fast-abbr-highlighting](https://github.com/5A6F65/fast-abbr-highlighting)
 
     - supports multi-word abbreviations
     - configurable
