@@ -2,6 +2,10 @@
 
 Out of the box, regular abbreviations ([Types > Regular](./types.md#regular)) expand only at the start of the command line.
 
+::: tip
+Configuring `ABBR_SPLIT_FN` is another way of customizing what content abbrevations expand after. Learn more at [Configuration variables](./configuration-variables.md).
+:::
+
 _Regular abbreviation prefixes_ are strings and globs that don't count against the "start of the line"-ness.
 
 Learn more at [Configuration variables](./configuration-variables.md).
