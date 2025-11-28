@@ -8,6 +8,8 @@ Regular is the default type.
 
 Regular abbreviations expand only at the start of the command line, or —with the default configuration— after `sudo ` at the start of the command line.
 
+That's different from zsh's native "regular aliases" and fish's native "regular abbreviations", which work when in command position even if that isn't the start of the line (that is, fish can expand `my-abbreviation` in `my-abbreviation` and in `foo; my-abbreviation`; zsh-abbr cannot). zsh-abbr has _experimental_ support for command position regular abbreviations. Read more about `ABBR_EXPERIMENTAL_COMMAND_POSITION_REGULAR_ABBREVIATIONS` in [Configuration variables](./configuration-variables).
+
 ::: tip
 Read [Prefixes](./prefixes.md) for how to disable the `sudo ` prefix and/or add your own prefixes.
 :::
