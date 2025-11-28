@@ -32,7 +32,7 @@ and fill in values in `.env`.
 Then install dependencies by running
 
 ```shell
-bun
+bun install
 ```
 
 ### Update external content
