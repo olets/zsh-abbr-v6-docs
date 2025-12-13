@@ -129,6 +129,7 @@ Replace `<styles for …>` with a [zsh character highlighting](http://zsh.source
 >
 > 1. The following zsh-syntax-highlighting solutions do not support unmatched parentheses within abbreviations. For example the valid `abbr '('='(x'` will make zsh-syntax-highlighting error. 🌟 Have a better solution? Please [contribute it](/contributing.html)!
 > 1. Only and all of the abbreviations defined when the shell was started will be highlighted. zsh-syntax-highlighting won't know about any abbreviation additions, erasures, or renames. To update zsh-syntax-highlighting, open a new terminal, or restart the shell by running `exec zsh`.
+> 1. The following regexp-based zsh-syntax-highlighting solutions do not support regex metacharacters in abbreviations. Work around this by manually escaping regex metacharacters in your abbreviations. For example, the valid `abbr 'a+'=b` will not lead to `a+` being highlighted as an abbreviation; replace `${(Qk)ABBR_REGULAR_USER_ABBREVIATIONS}` with `${${(Qk)ABBR_REGULAR_USER_ABBREVIATIONS}//+/\\\+}`, and `${(Qk)ABBR_GLOBAL_USER_ABBREVIATIONS}` with `${${(Qk)ABBR_GLOBAL_USER_ABBREVIATIONS}//+/\\\+}` (given a string variable `x`, `${x//+/\\\+}` replaces all instances of `+` in `x` with `\+`). 🌟 Have a better solution? Please contribute to [zsh-abbr#201](https://github.com/olets/zsh-abbr/issues/201)!
 
 Linux:
 
