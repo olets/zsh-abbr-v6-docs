@@ -13,7 +13,7 @@ ABBR_LOG_AVAILABLE_ABBREVIATION=1
 
 Now if you miss using one of your abbreviations, a reminder message will be logged in the terminal.
 
-```
+```shell
 % abbr a=b
 % b[Enter]
 abbr: `a` is your regular user abbreviation for `b`
