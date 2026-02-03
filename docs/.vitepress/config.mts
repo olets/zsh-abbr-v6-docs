@@ -299,6 +299,10 @@ export default defineConfig({
                 link: "/exported-variables",
               },
               {
+                text: "Extending",
+                link: "/extending",
+              },
+              {
                 text: "Integrations",
                 link: "/integrations",
               },
