@@ -1,8 +1,8 @@
 # Extending
 
-In addition to the CLI [Commands](./commands.md), the [Exported Variables](./exported-variables.md), and the [Widgets](./widgets-and-key-bindings.md), zsh-abbr makes available functions which will are useful for extensions authors.
+In addition to the CLI [Commands](./commands.md), the [Exported Variables](./exported-variables.md), and the [Widgets](./widgets-and-key-bindings.md), zsh-abbr makes available functions which will are useful for extension authors.
 
-### abbr-expand-line <Badge type="info">6.5.0</Badge>
+## abbr-expand-line <Badge type="info">6.5.0</Badge>
 
 `abbr-expand-line <left-text> [<right text>]` does the heavy lifting of figuring out whether and how a line of text should be manipulated given the cursor placement, the user's zsh-abbr and zsh configurations, and the available abbreviations.
 
@@ -10,9 +10,9 @@ To use it, first create an associative array name `reply` in the scope you'll ca
 
 `abbr-expand-line` will pass if it finds an expandable abbreviation, and will fail otherwise.
 
-The function will change `reply`. The possible keys are
+The possible `reply` entries are
 
-key | Type | Use | Condition
+Key | Value's Type | Use | Condition
 ---|---|---|---
 `abbreviation` | string | The expandable abbreviation | Exists if an expandable abbreviation was found
 `expansion` | string | The expandable abbreviation's expansion | Exists if an expandable abbreviation was found
@@ -82,7 +82,7 @@ typeset -A reply=(
 Example script use (buffer variable use is _not_ required):
 
 ```shell
-my_fn() {
+my_abbr-expand-line_fn() {
   local -A reply # will be set by abbr-expand-line
   
   # …
@@ -94,6 +94,62 @@ my_fn() {
   } || {
     # …
   }
+  
+  # …
+}
+```
+
+## abbr-set-line-cursor <Badge type="info">6.5.0</Badge>
+
+`abbr-set-line-cursor <text>` looks for a `ABBR_LINE_CURSOR_MARKER`, and puts "text before the cursor" and "text after the cursor" in a `reply` variable; it takes `ABBR_SET_LINE_CURSOR` into account (read more at Configuration Variables).
+
+To use it, first create an associative array name `reply` in the scope you'll call `abbr-set-line-cursor` from. Then call `abbr-set-line-cursor`, passing one string.
+
+`abbr-set-line-cursor` will pass if the cursor can be placed, and will fail otherwise.
+
+The possible `reply` entries are
+
+Key | Value's Type | Use | Condition
+---|---|---|---
+`loutput` | string | Text to the left of the cursor after any cursor placement. | Exists if the cursor is placeable. 
+`routput` | string | Text to the right of the cursor after any cursor placement. | Exists if the cursor is placeable. 
+
+Example CLI use:
+
+```shell
+% ABBR_SET_LINE_CURSOR=1
+% typeset -A reply
+% abbr-set-line-cursor "foo bar"
+% echo $?
+% typeset -p reply
+typeset -a reply=(  )
+
+% abbr-set-line-cursor "foo%bar"
+% echo $?
+0
+% typeset -p reply
+typeset -A reply=(
+  # line breaks added for legibility
+  
+  [loutput]=foo
+  [routput]=bar
+)
+```
+
+Example script use (buffer variable use is _not_ required):
+
+```shell
+# .zshrc
+ABBR_SET_LINE_CURSOR=1
+```
+
+```shell
+my_abbr-set-line-cursor_fn() {
+  local -A reply # will be set by abbr-set-line-cursor
+  
+  # …
+  
+  abbr-set-line-cursor $BUFFER && # …
   
   # …
 }
