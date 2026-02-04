@@ -1,6 +1,6 @@
 # Extending
 
-In addition to the CLI [Commands](./commands.md), the [Exported Variables](./exported-variables.md), and the [Widgets](./widgets-and-key-bindings.md), zsh-abbr makes available functions which will useful for scripters who want to author extensions.
+In addition to the CLI [Commands](./commands.md), the [Exported Variables](./exported-variables.md), and the [Widgets](./widgets-and-key-bindings.md), zsh-abbr makes available functions which will are useful for extensions authors.
 
 ### abbr-expand-line <Badge type="info">6.5.0</Badge>
 
