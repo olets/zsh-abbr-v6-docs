@@ -10,5 +10,4 @@ zsh-abbr automatically keeps the user abbreviations storage file alphabetized, w
 
 Every time an `abbr` command is run, the session's updates its user abbreviations with the latest from the user abbreviations file. This should add no appreciable time, but you prefer it can be turned off by setting `ABBR_AUTOLOAD=0`.
 
-To refresh the user abbreviations from the user abbreviation, run `abbr load` (or any other `abbr` command).
-
+To refresh the user abbreviations from the user abbreviation, run `abbr load` (or any other `abbr` command if `ABBR_AUTOLOAD` is `1`, as it is by default).
