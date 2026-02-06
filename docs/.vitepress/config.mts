@@ -335,6 +335,10 @@ export default defineConfig({
         collapsed: false,
         items: [
           {
+            text: "Ecosystem",
+            link: "/ecosystem.md",
+          },
+          {
             text: "Contributing",
             link: "/contributing.html",
           },
