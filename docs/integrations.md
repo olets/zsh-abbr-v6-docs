@@ -182,7 +182,7 @@ bindkey -v
 
 > _By [Morten Scheel](https://github.com/mortenscheel) and Henry Bley-Vroman._
 
-Run following snippet in your terminal to create regular user abbreviations for all your macOS text substitutions (to create session and/or global abbreviations, modify the `abbr add` line).
+Run the following snippet in your terminal to create regular user abbreviations for all your macOS text substitutions (to create session and/or global abbreviations, modify the `abbr add` line).
 
 ```shell
 for substitution in ${(f)"$(defaults read ~/Library/Preferences/.GlobalPreferences.plist NSUserDictionaryReplacementItems | plutil -convert json -o - - | jq -r 'to_entries[] | "\(.value.replace)=\(.value.with)"')"}; do
